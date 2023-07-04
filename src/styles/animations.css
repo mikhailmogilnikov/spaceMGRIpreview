@@ -1,0 +1,21 @@
+
+.navbar_mobile_anim-enter {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+.navbar_mobile_anim-enter-active {
+    transform: translateY(0);
+    transition: 1s cubic-bezier(0, 1.07, 0, 0.99);
+    opacity: 1;
+}
+  
+.navbar_mobile_anim-exit {
+    opacity: 1;
+}
+
+.navbar_mobile_anim-exit-active {
+    transform: translateY(100px);
+    transition: 1s cubic-bezier(0, 1.07, 0, 0.99);
+    opacity: 0;
+}
