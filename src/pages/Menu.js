@@ -4,13 +4,13 @@ import Deadline from "../components/deadline_block/Deadline";
 
 const MenuPage = () => {
     return ( 
-        <main className="content_container">
+        <>
             <Courses />
 
             <Menu />
 
             <Deadline />
-        </main>
+        </>
      );
 }
  

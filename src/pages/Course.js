@@ -1,17 +1,17 @@
 import Courses from "../components/courses_block/Courses";
-import Schedule from "../components/schedule_block/Schedule";
+import Course from "../components/course_block/Course";
 import Deadline from "../components/deadline_block/Deadline";
 
-const HomePage = () => {
-    return ( 
+const CoursePage = () => {
+    return (
         <>
             <Courses />
 
-            <Schedule />
+            <Course />
 
             <Deadline />
         </>
-     );
+    );
 }
- 
-export default HomePage;
+
+export default CoursePage;

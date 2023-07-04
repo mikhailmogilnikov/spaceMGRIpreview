@@ -84,9 +84,6 @@ h1 {
     margin: 0;
     width: 100%;
     height: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
     position: relative;
     user-select: none;
     cursor: default;
@@ -101,8 +98,6 @@ h2 {
     width: 100%;
     height: auto;
     white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
     position: relative;
 }
 
@@ -140,6 +135,10 @@ p {
     width: 100%;
     height: auto;
     position: relative;
+}
+
+.text_back {
+    font-size: 28px;
 }
 
 .bottom_text {
@@ -249,6 +248,7 @@ body {
     align-content: center;
     align-items: center;
     justify-content: center;
+    overflow-y: scroll;
 }
 
 .main_container {
@@ -385,10 +385,11 @@ a {
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
     width: 100%;
     z-index: 1;
     box-sizing: border-box;
+    gap: 10px;
 }
 
 .button_cover {
@@ -664,6 +665,14 @@ a {
     opacity: 0.6;
 }
 
+.tablet_back {
+    display: none;
+}
+
+.visible {
+
+}
+
 .hidden {
     display: none;
 }
@@ -715,6 +724,19 @@ a {
 
     .edge_block {
         display: none;
+    }
+
+    .course_list_item {
+        padding: 16px 12px 16px 16px;
+    }
+
+    .desktop_back {
+        display: none;
+    }
+
+    .tablet_back {
+        display: flex;
+        padding: 6px 10px;
     }
 }
 
