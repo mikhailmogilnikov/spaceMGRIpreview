@@ -33,7 +33,7 @@
 }
 
 * {
-    font-family: "Inter";
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     letter-spacing: 0em;
     line-height: 1.2;
     font-style: normal;
