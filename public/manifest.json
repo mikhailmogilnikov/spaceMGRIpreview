@@ -19,5 +19,6 @@
     }
   ],
   "start_url": ".",
-  "display": "fullscreen"
+  "display": "fullscreen",
+  "theme_color": "#EDEDED"
 }
