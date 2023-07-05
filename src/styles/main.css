@@ -7,7 +7,7 @@
     --var-bg: #EDEDED;
     --var-block: #ffffff;
     --var-text-and-icons: #000000;
-    --var-elements: #F7F7F7;
+    --var-elements: #f6f6f6;
     --var-deadline-button: #FFFFFF;
     --var-mobile-nav-bar: #ffffffb3;
     --var-active-element: #919191;
@@ -22,7 +22,7 @@
         --var-bg: #000000;
         --var-block: #121212;
         --var-text-and-icons: #FFFFFF;
-        --var-elements: #1B1B1B;
+        --var-elements: #1d1d1d;
         --var-deadline-button: #383838;
         --var-mobile-nav-bar: #000000b3;
         --var-active-element: #2B2B2B;
@@ -139,7 +139,7 @@ p {
 }
 
 .text_file {
-    white-space: pre-wrap;
+        white-space: pre-wrap;
     word-wrap: break-word;
     word-break: break-word;
 }
