@@ -1,4 +1,5 @@
 import { CaretRight, Clock } from "@phosphor-icons/react";
+import { NavLink } from "react-router-dom";
 
 const DeadlineInner = () => {
     return (
@@ -8,7 +9,8 @@ const DeadlineInner = () => {
             </div>
 
             <div className="deadline_row_container">
-                <div className="content_cover select">
+                
+                <NavLink to={'/task'} className="content_cover select">
                     <div className="content_elem_row">
                         <div className="content_inner_column">
                             <h3>Сейсморазведка</h3>
@@ -20,7 +22,7 @@ const DeadlineInner = () => {
                         </div>
                         <CaretRight weight="bold" className="icon_mid tablet" />
                     </div>
-                </div>
+                </NavLink>
 
                 <div className="content_cover select">
                     <div className="content_elem_row">

@@ -206,7 +206,7 @@ p {
 }
 
 .breaker {
-    flex-shrink: 0;
+    flex-shrink: 1;
     width: calc(100% - 20px);
     height: 1px;
     display: block;
@@ -216,6 +216,19 @@ p {
     position: relative;
     border-radius: 10px;
     margin: 0 0 0 20px;
+}
+
+.breaker_ver {
+    flex-shrink: 1;
+    width: 1px;
+    height: 24px;
+    display: block;
+    background-color: var(--var-text-and-icons);
+    overflow: hidden;
+    opacity: 0.1;
+    position: relative;
+    border-radius: 10px;
+    margin: 0;
 }
 
 .low_opacity {
@@ -398,11 +411,48 @@ a {
     display: flex;
     align-items: center;
     flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.button_cover_elem {
+    width: min-content;
+    height: max-content;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     cursor: pointer;
     position: relative;
 }
+
+.button_red {
+    width: min-content;
+    height: min-content;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    cursor: pointer;
+    position: relative;
+}
+
+@media (pointer: fine) {
+    .button_red:hover {
+        background-color: rgba(255, 2, 2, 0.07);
+    }
+    }
+    
+    .button_red:active {
+        background-color: rgba(255, 0, 0, 0.14);
+    }
 
 .course_list_container {
     flex-shrink: 0;
@@ -483,7 +533,7 @@ a {
 
 .content_elem_row {
     box-sizing: border-box;
-    flex-shrink: 0;
+    flex-shrink: 1;
     width: 100%;
     height: min-content;
     display: flex;
@@ -513,8 +563,24 @@ a {
     gap: 17px;
 }
 
+.container_row_zero {
+    box-sizing: border-box;
+    flex-shrink: 1;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
 .container_row_start {
-    flex-shrink: 0;
+    flex-shrink: 1;
     width: 100%;
     height: min-content;
     display: flex;
@@ -529,8 +595,12 @@ a {
     gap: 10px;
 }
 
+.extended_gap {
+    gap: 17px;
+}
+
 .container_column_start {
-    flex-shrink: 0;
+    flex-shrink: 1;
     width: 100%;
     height: min-content;
     display: flex;
@@ -688,6 +758,11 @@ a {
     display: none;
 }
 
+.back_container {
+    display: flex;
+    padding: 7px 10px 0px 10px;
+}
+
 .visible {
 
 }
@@ -728,6 +803,10 @@ a {
     display: none;
 }
 
+.desktop_only {
+    display: flex;
+}
+
 
 
 @media (max-width: 1360px) {
@@ -753,13 +832,8 @@ a {
         padding: 16px 12px 16px 16px;
     }
 
-    .desktop_back {
+    .desktop_only {
         display: none;
-    }
-
-    .tablet_back {
-        display: flex;
-        padding: 6px 10px;
     }
 
     .tablet {

@@ -11,6 +11,7 @@ import MenuPage from "./pages/Menu";
 import CoursePage from "./pages/Course";
 import CoursesTablet from "./components/courses_block/CoursesTablet";
 import DeadlineTablet from "./components/deadline_block/DeadlineTablet";
+import TaskPage from "./pages/Task";
 import Sky from "./components/sky/Sky";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
               <Route path="/course" element={<CoursePage />} />
               <Route path="/courses" element={<CoursesTablet />} />
               <Route path="/deadlines" element={<DeadlineTablet />} />
+              <Route path="/task" element={<TaskPage />} />
 
             </Routes>
 
