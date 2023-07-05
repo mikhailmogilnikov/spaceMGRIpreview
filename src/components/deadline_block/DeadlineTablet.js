@@ -3,7 +3,7 @@ import DeadlineInner from "./DeadlineInner";
 const Deadline = () => {
 
     return (
-        <div class="block">
+        <div className="block">
             <DeadlineInner />
         </div>
      )

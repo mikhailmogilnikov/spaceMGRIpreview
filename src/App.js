@@ -2,6 +2,7 @@ import "./styles/main.css";
 import "./styles/schedule.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/scroll_to_top/ScrollToTop";
 
 import Header from "./components/header/Header";
 import Navbar_mobile from "./components/nav_bar_mobile/Navbar_mobile";
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
 
         {/* <Sky /> */}
 

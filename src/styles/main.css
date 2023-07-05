@@ -2,6 +2,7 @@
 @import url("menu.css");
 @import url("animations.css");
 
+
 :root {
     --var-bg: #EDEDED;
     --var-block: #ffffff;
@@ -43,7 +44,6 @@
 }
 
 *::-webkit-scrollbar {
-    /* display: none; */
     overflow: overlay;
     height: 12px;
     width: 7px;
@@ -109,9 +109,6 @@ h3 {
     margin: 0;
     width: 100%;
     height: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
     position: relative;
 }
 
@@ -141,6 +138,12 @@ p {
     font-size: 28px;
 }
 
+.text_file {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
 .bottom_text {
     font-weight: 600;
     color: var(--var-text-and-icons);
@@ -152,10 +155,6 @@ p {
     position: relative;
     opacity: 0.3;
     line-height: 1.5;
-}
-
-.text_lighter {
-    color: white;
 }
 
 .project_title {
@@ -498,6 +497,22 @@ a {
     gap: 17px;
 }
 
+.content_inner_column {
+    box-sizing: border-box;
+    flex-shrink: 1;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    position: relative;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 17px;
+}
+
 .container_row_start {
     flex-shrink: 0;
     width: 100%;
@@ -546,6 +561,10 @@ a {
     flex-wrap: nowrap;
     gap: 10px;
     border-radius: 10px;
+}
+
+.text_lighter {
+    color: white;
 }
 
 .lab {
@@ -705,6 +724,10 @@ a {
     filter: invert(1);
 }
 
+.tablet {
+    display: none;
+}
+
 
 
 @media (max-width: 1360px) {
@@ -737,6 +760,10 @@ a {
     .tablet_back {
         display: flex;
         padding: 6px 10px;
+    }
+
+    .tablet {
+        display: flex;
     }
 }
 

@@ -21,21 +21,21 @@ const Navbar_mobile = () => {
 
     return (
         <CSSTransition in={isNavbarVisible} classNames={'navbar_mobile_anim'} timeout={1000} unmountOnExit>
-            <nav class="nav_bar_mobile">
+            <nav className="nav_bar_mobile">
 
-                <NavLink to="/" className="nav_bar_mobile_container">
+                <NavLink to="/" className="nav_bar_mobile_container" preventScrollReset={true}>
                     <CalendarBlank weight="bold" className="icon_nav_mobile" />
                 </NavLink>
 
-                <NavLink to="/courses" className="nav_bar_mobile_container">
+                <NavLink to="/courses" className="nav_bar_mobile_container" preventScrollReset={true}>
                     <StarFour weight="bold" className="icon_nav_mobile" />
                 </NavLink>
 
-                <NavLink to="/deadlines" className="nav_bar_mobile_container">
+                <NavLink to="/deadlines" className="nav_bar_mobile_container" preventScrollReset={true}>
                     <ClockCountdown weight="bold" className="icon_nav_mobile" />
                 </NavLink>
 
-                <NavLink to="/menu" className="nav_bar_mobile_container">
+                <NavLink to="/menu" className="nav_bar_mobile_container" preventScrollReset={true}>
                     <List weight="bold" className="icon_nav_mobile" />
                 </NavLink>
 

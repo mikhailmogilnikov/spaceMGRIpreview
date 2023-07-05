@@ -79,33 +79,33 @@ const Schedule = () => {
                   </div>
                   <h3>лек Геолого-геофизические информационные комплексы</h3>
                   <div className="column_container_mini low_opacity">
-                    <div class="container_row_start">
+                    <div className="container_row_start">
                       <GraduationCap weight="bold" className="icon_min" />
                       <p>зав Каф Оборнев Е.А.</p>
                     </div>
-                    <div class="container_row_start">
+                    <div className="container_row_start">
                       <MapPin weight="bold" className="icon_min" />
                       <p>к.к</p>
                     </div>
                   </div>
                 </div>
 
-                <div class="breaker"></div>
+                <div className="breaker"></div>
 
-                <div class="content_elem_column">
-                  <div class="container_row_start">
-                    <div class="lighter exam">
-                      <p class="text_lighter">13:00 – 15:20</p>
+                <div className="content_elem_column">
+                  <div className="container_row_start">
+                    <div className="lighter exam">
+                      <p className="text_lighter">13:00 – 15:20</p>
                     </div>
-                    <div class="lesson_active hidden"></div>
+                    <div className="lesson_active hidden"></div>
                   </div>
                   <h3>экз Геолого-геофизические информационные комплексы</h3>
-                  <div class="column_container_mini low_opacity">
-                    <div class="container_row_start">
+                  <div className="column_container_mini low_opacity">
+                    <div className="container_row_start">
                       <GraduationCap weight="bold" className="icon_min" />
                       <p>зав Каф Оборнев Е.А.</p>
                     </div>
-                    <div class="container_row_start">
+                    <div className="container_row_start">
                       <MapPin weight="bold" className="icon_min" />
                       <p>к.к</p>
                     </div>
