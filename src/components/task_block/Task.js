@@ -1,9 +1,17 @@
 import { Clock, CaretLeft, PencilSimple, FileZip, DownloadSimple, GraduationCap, CalendarBlank, ChatCircle, Plus, Trash } from "@phosphor-icons/react";
 
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import Materials from "../materials/Materials";
+import AddSolutionModal from "./AddSolutionModal";
 
 const Task = () => {
+    const [isModal, setIsModal] = useState(false)
+
+    const setModal = () => {
+        setIsModal(!isModal)
+    }
+
     return (
         <div className="block">
 
@@ -89,10 +97,12 @@ const Task = () => {
 
                     <div className="breaker"></div>
 
-                    <div className="content_elem_row select">
+                    <div onClick={setModal} className="content_elem_row select">
                         <Plus weight="bold" className="icon_min" height={"24px"} />
                         <p>Добавить</p>
                     </div>
+                    <AddSolutionModal isModal={isModal} setModal={setModal}/>
+
                 </div>
             </div>
 

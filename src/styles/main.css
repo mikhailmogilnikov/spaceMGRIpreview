@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url("menu.css");
 @import url("animations.css");
+@import url("modal.css");
 
 
 :root {
@@ -15,6 +16,7 @@
     --var-red: #E34A4A;
     --var-hover: #b8b8b85a;
     --var-push: #b8b8b885;
+    --var-modal-bg: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +32,7 @@
         --var-red: #E34A4A;
         --var-hover: #2b2b2b94;
         --var-push: #2b2b2bbc;
+        --var-modal-bg: #121212;
     }
 }
 
