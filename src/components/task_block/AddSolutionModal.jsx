@@ -1,4 +1,4 @@
-import { FilePlus, LinkSimple, Paperclip, Plus, X } from "@phosphor-icons/react";
+import { CloudArrowUp, FilePlus, LinkSimple, Paperclip, Plus, X } from "@phosphor-icons/react";
 import { CSSTransition } from "react-transition-group";
 
 const AddSolutionModal = ({ setModal, isModal }) => {
@@ -11,50 +11,47 @@ const AddSolutionModal = ({ setModal, isModal }) => {
             <CSSTransition in={isModal} timeout={1000} classNames={'modal_anim'} mountOnEnter>
                 <div className="modal">
                     <div className="title_container">
-                        <Paperclip weight="bold" className="icon_mid" size={"28px"}/>
+                        <Paperclip weight="bold" className="icon_mid" size={"28px"} />
                         <h1 className="modal_title_text">Прикрепить решение</h1>
-                        <X onClick={setModal} weight="bold" className="icon_mid pointer" size={"28px"}/>
+                        <X onClick={setModal} weight="bold" className="icon_mid pointer" size={"28px"} />
                     </div>
                     <div className="element_container">
                         <div className="title_container">
-                            <FilePlus weight="bold" className="icon_mid"/>
+                            <FilePlus weight="bold" className="icon_mid" />
                             <h3>Файл</h3>
                         </div>
-                        <div className="content_cover">
-                            <div className="content_elem_column">
-                                <h3>Могильников Михаил Андреевич</h3>
-                                <div className="column_container_mini low_opacity">
-                                    <div className="container_row_start">
-
-                                        <p>ПИ-20</p>
-                                    </div>
-                                    <div className="container_row_start">
-
-                                        <p>mikhail.mogilnikov02@gmail.com</p>
-                                    </div>
-                                </div>
+                        <div className="attach_cover">
+                            <div className="attach_container select">
+                                <CloudArrowUp weight="bold" className="icon_big" size={"40px"} />
+                                <p>Выберите файл с устройства или перетащите его в это окно</p>
                             </div>
                         </div>
                     </div>
                     <div className="element_container">
                         <div className="title_container">
-                            <LinkSimple weight="bold" className="icon_mid"/>
+                            <LinkSimple weight="bold" className="icon_mid" />
                             <h3>Ссылка</h3>
                         </div>
                         <div className="content_cover">
-                            <div className="content_elem_column">
-                                <h3>Могильников Михаил Андреевич</h3>
-                                <div className="column_container_mini low_opacity">
-                                    <div className="container_row_start">
-
-                                        <p>ПИ-20</p>
-                                    </div>
-                                    <div className="container_row_start">
-
-                                        <p>mikhail.mogilnikov02@gmail.com</p>
-                                    </div>
-                                </div>
+                            <div className="content_elem_row">
+                                <input
+                                    className="input"
+                                    placeholder='Наименование URL-ссылки'
+                                />
                             </div>
+
+                            <div className="breaker"></div>
+
+                            <div className="content_elem_row">
+                                <input
+                                    className="input"
+                                    placeholder='URL-ссылка'
+                                />
+                            </div>
+
+                        </div>
+                        <div className="button_main">
+                            <h4 className="text_button_main">Добавить</h4>
                         </div>
                     </div>
                 </div>
