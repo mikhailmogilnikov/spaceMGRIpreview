@@ -862,6 +862,10 @@ a {
     padding: 0;
 }
 
+.solo_block {
+    margin: 0 auto;
+}
+
 input::placeholder {
     color: var(--var-text-and-icons);
     opacity: 0.6;

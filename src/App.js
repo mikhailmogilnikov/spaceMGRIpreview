@@ -6,13 +6,14 @@ import ScrollToTop from "./components/scroll_to_top/ScrollToTop";
 
 import Header from "./components/header/Header";
 import Navbar_mobile from "./components/nav_bar_mobile/Navbar_mobile";
-import HomePage from "./pages/Home";
-import MenuPage from "./pages/Menu";
-import CoursePage from "./pages/Course";
+import HomePage from "./pages/logged in/Home";
+import MenuPage from "./pages/logged in/Menu";
+import CoursePage from "./pages/logged in/Course";
 import CoursesTablet from "./components/courses_block/CoursesTablet";
 import DeadlineTablet from "./components/deadline_block/DeadlineTablet";
-import TaskPage from "./pages/Task";
+import TaskPage from "./pages/logged in/Task";
 import Sky from "./components/sky/Sky";
+import Enter from "./components/enter_block/Enter";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               <Route path="/courses" element={<CoursesTablet />} />
               <Route path="/deadlines" element={<DeadlineTablet />} />
               <Route path="/task" element={<TaskPage />} />
+              <Route path="/enter" element={<Enter />} />
 
             </Routes>
 

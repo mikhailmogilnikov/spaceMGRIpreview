@@ -20,12 +20,22 @@ const AddSolutionModal = ({ setModal, isModal }) => {
                             <FilePlus weight="bold" className="icon_mid" />
                             <h3>Файл</h3>
                         </div>
-                        <div className="attach_cover">
+
+                        <div className="attach_cover desktop_only">
                             <div className="attach_container select">
                                 <CloudArrowUp weight="bold" className="icon_big" size={"40px"} />
                                 <p>Выберите файл с устройства или перетащите его в это окно</p>
                             </div>
                         </div>
+
+                        <div className="content_cover tablet">
+                            <div className="content_elem_row select">
+                                <CloudArrowUp weight="bold" className="icon_mid" />
+                                <p>Загрузить с устройства</p>
+                                <Plus weight="bold" className="icon_mid" />
+                            </div>
+                        </div>
+
                     </div>
                     <div className="element_container">
                         <div className="title_container">
