@@ -1,4 +1,4 @@
-import { CaretRight } from "@phosphor-icons/react";
+import { AsteriskSimple, CaretRight, Question } from "@phosphor-icons/react";
 import { NavLink } from "react-router-dom";
 
 const Enter = ({handleLogin}) => {
@@ -43,6 +43,7 @@ const Enter = ({handleLogin}) => {
                 <div className="content_cover">
 
                     <NavLink to="/faq" className="content_elem_row select">
+                        <Question weight="bold" className="icon_mid" />
                         <p>Помощь и возможности</p>
                         <CaretRight weight="bold" className="icon_mid" />
                     </NavLink>
@@ -50,6 +51,7 @@ const Enter = ({handleLogin}) => {
                     <div className="breaker"></div>
 
                     <NavLink to="/privacy" className="content_elem_row select">
+                        <AsteriskSimple weight="bold" className="icon_mid" />
                         <p>Политика конфиденциальности</p>
                         <CaretRight weight="bold" className="icon_mid" />
                     </NavLink>

@@ -22,7 +22,7 @@ const Task = () => {
 
             <div className="element_container">
                 <div className="title_container">
-                    <h3>Файл</h3>
+                    <h3>Файл задания</h3>
                 </div>
 
                 <div className="content_cover">

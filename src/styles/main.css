@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url("menu.css");
-@import url("animations.css");
 @import url("modal.css");
+@import url("settings.css");
 
 
 :root {
@@ -810,7 +810,11 @@ a {
 input::placeholder {
     color: var(--var-text-and-icons);
     opacity: 0.6;
-  }
+}
+
+.red {
+    color: var(--var-red);
+}
 
 
 @media (max-width: 1360px) {
@@ -865,7 +869,7 @@ input::placeholder {
     }
 
     .main_container {
-        padding-bottom: 90px;
+        padding-bottom: 94px;
     }
 
     .project_title {

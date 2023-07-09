@@ -1,15 +1,15 @@
 import "./styles/main.css";
 import "./styles/schedule.css";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom';
 
 import ScrollToTop from "./components/scroll_to_top/ScrollToTop";
+
+import Sky from "./components/sky/Sky";
 import Header from "./components/header/Header.js"
 import CoursesTablet from "./components/courses_block/CoursesTablet";
 import DeadlineTablet from "./components/deadline_block/DeadlineTablet";
-import Sky from "./components/sky/Sky";
 import Enter from "./components/enter_block/Enter";
 import Courses from "./components/courses_block/Courses";
 import Deadline from "./components/deadline_block/Deadline";
@@ -17,6 +17,7 @@ import Schedule from "./components/schedule_block/Schedule";
 import Menu from "./components/menu_block/Menu";
 import Course from "./components/course_block/Course";
 import Task from "./components/task_block/Task";
+import Settings from "./components/settings_block/Settings";
 
 function App() {
   const location = useLocation();
@@ -72,6 +73,7 @@ function App() {
               <Route path="/courses" element={<CoursesTablet />} />
               <Route path="/deadlines" element={<DeadlineTablet />} />
               <Route path="/task" element={<Task />} />
+              <Route path="/settings" element={<Settings />} />
 
               <Route path="/enter" element={<Enter handleLogin={handleLogin} />} />
 

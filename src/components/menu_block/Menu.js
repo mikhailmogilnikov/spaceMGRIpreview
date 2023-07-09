@@ -1,4 +1,4 @@
-import { UsersThree, At, Sun, Moon, StarAndCrescent, GearFine, CaretRight, ArrowSquareOut } from "@phosphor-icons/react";
+import { UsersThree, At, Sun, Moon, StarAndCrescent, GearFine, CaretRight, ArrowSquareOut, AsteriskSimple, Question, LinkSimple, GlobeSimple } from "@phosphor-icons/react";
 
 import { NavLink } from "react-router-dom";
 
@@ -105,6 +105,7 @@ const Menu = ({ handleLogout }) => {
           <div className="content_cover">
 
                 <NavLink to="/faq" className="content_elem_row select">
+                    <Question weight="bold" className="icon_mid" />
                     <p>Помощь и возможности</p>
                     <CaretRight weight="bold" className="icon_mid" />
                 </NavLink>
@@ -112,6 +113,7 @@ const Menu = ({ handleLogout }) => {
                 <div className="breaker"></div>
 
                 <NavLink to="/privacy" className="content_elem_row select">
+                    <AsteriskSimple weight="bold" className="icon_mid" />
                     <p>Политика конфиденциальности</p>
                     <CaretRight weight="bold" className="icon_mid" />
                 </NavLink>
@@ -119,6 +121,7 @@ const Menu = ({ handleLogout }) => {
                 <div className="breaker"></div>
 
                 <NavLink to="https://mgri.ru" target="_blank" rel="noreferrer" className="content_elem_row select">
+                    <LinkSimple weight="bold" className="icon_mid" />
                     <p>Веб-сайт МГРИ</p>
                     <ArrowSquareOut weight="bold" className="icon_mid" />
                 </NavLink>
@@ -126,6 +129,7 @@ const Menu = ({ handleLogout }) => {
                 <div className="breaker"></div>
 
                 <NavLink to="https://stud.mgri.ru" target="_blank" rel="noreferrer" className="content_elem_row select">
+                    <GlobeSimple weight="bold" className="icon_mid" />
                     <p>Электронно-образовательная платформа</p>
                     <ArrowSquareOut weight="bold" className="icon_mid" />
                 </NavLink>
