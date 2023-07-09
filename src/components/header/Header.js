@@ -1,15 +1,12 @@
-import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 
-function Header() {
+function Header({ isLoggedIn }) {
     return (
         <header className="header_container">
 
-            <NavLink to="/">
-                <h1 className="project_title">Space</h1>
-            </NavLink>
-           
-            <Navbar />
+            <h1 className="project_title">Space</h1>
+
+            {isLoggedIn && <Navbar />}
 
         </header>
     );

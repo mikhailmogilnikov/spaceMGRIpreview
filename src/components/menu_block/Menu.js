@@ -2,7 +2,7 @@ import { UsersThree, At, Sun, Moon, StarAndCrescent, GearFine, CaretRight, Arrow
 
 import { NavLink } from "react-router-dom";
 
-const Menu = () => {
+const Menu = ({ handleLogout }) => {
     return (  
     <div className="block">
         <div className="title_container">
@@ -164,7 +164,7 @@ const Menu = () => {
 
         </div>
 
-        <NavLink to="/enter" className="exit_button">
+        <NavLink to="/enter" onClick={handleLogout} className="exit_button">
             <h3 className="exit_text">Выйти</h3>
         </NavLink>
 

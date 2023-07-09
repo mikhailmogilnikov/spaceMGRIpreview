@@ -1,7 +1,7 @@
 import { CaretRight } from "@phosphor-icons/react";
 import { NavLink } from "react-router-dom";
 
-const Enter = () => {
+const Enter = ({handleLogin}) => {
     return (
         <div className="block solo_block">
 
@@ -27,7 +27,7 @@ const Enter = () => {
                         />
                     </div>
                 </div>
-                <NavLink to={'/'} className="button_main">
+                <NavLink to={'/'} onClick={handleLogin} className="button_main">
                     <h4 className="text_button_main">Войти</h4>
                 </NavLink>
                 <div className="title_container">

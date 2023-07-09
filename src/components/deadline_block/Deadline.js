@@ -1,6 +1,6 @@
 import DeadlineInner from "./DeadlineInner";
 
-const Deadline = () => {
+const Deadline = ({ isLoggedIn }) => {
 
   return (
     <div className="block edge_block">
