@@ -904,6 +904,7 @@ input::placeholder {
         left: 13%;
         right: auto;
         z-index: 3;
+        animation: enter 1s cubic-bezier(0, 1.07, 0, 0.99);
     }
     
     .nav_bar_mobile_container {
@@ -927,4 +928,14 @@ input::placeholder {
         color: var(--var-text-and-icons);
     }
 
+}
+
+@keyframes enter {
+    0% {
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
