@@ -4,14 +4,13 @@ import "./styles/schedule.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/scroll_to_top/ScrollToTop";
 
-import Header from "./components/header/Header";
-import Navbar_mobile from "./components/nav_bar_mobile/Navbar_mobile";
-import HomePage from "./pages/logged in/Home";
-import MenuPage from "./pages/logged in/Menu";
-import CoursePage from "./pages/logged in/Course";
+import Header from "./components/header/Header.js"
+import HomePage from "./pages/logged-in/Home";
+import MenuPage from "./pages/logged-in/Menu";
+import CoursePage from "./pages/logged-in/Course";
 import CoursesTablet from "./components/courses_block/CoursesTablet";
 import DeadlineTablet from "./components/deadline_block/DeadlineTablet";
-import TaskPage from "./pages/logged in/Task";
+import TaskPage from "./pages/logged-in/Task";
 import Sky from "./components/sky/Sky";
 import Enter from "./components/enter_block/Enter";
 
@@ -41,8 +40,6 @@ function App() {
 
           </main>
         </div>
-
-        <Navbar_mobile />
 
       </Router>
     </div>
