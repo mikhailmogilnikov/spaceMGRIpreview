@@ -17,11 +17,11 @@ const Settings = () => {
                     <div className="content_elem_column">
                         <h3>Сейсморазведка</h3>
                         <div className="container_row_start">
-                            <div className="button_settings "> 
+                            <div className="button_settings edit"> 
                                 <PencilSimple weight="bold" className="icon_min" />
                                 <p className="text_min">Изменить</p>
                             </div>
-                            <div className="button_settings">
+                            <div className="button_settings unpin">
                                 <PushPinSlash weight="bold" className="icon_min red" />
                                 <p className="text_min red">Открепить</p>
                             </div>
@@ -33,11 +33,11 @@ const Settings = () => {
                     <div className="content_elem_column">
                         <h3>Магниторазведка</h3>
                         <div className="container_row_start">
-                            <div className="button_settings "> 
+                            <div className="button_settings edit"> 
                                 <PencilSimple weight="bold" className="icon_min" />
                                 <p className="text_min">Изменить</p>
                             </div>
-                            <div className="button_settings">
+                            <div className="button_settings unpin">
                                 <PushPinSlash weight="bold" className="icon_min red" />
                                 <p className="text_min red">Открепить</p>
                             </div>
@@ -84,6 +84,7 @@ const Settings = () => {
 
                 </div>
             </div>
+            
             <div className="save_button">
                 <h4 className="text_lighter">Сохранить изменения</h4>
             </div>

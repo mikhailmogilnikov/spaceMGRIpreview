@@ -26,12 +26,24 @@
 }
 
 @media (pointer: fine) {
-    .button_settings:hover {
-        opacity: 0.9;
+    .edit:hover {
+        opacity: 0.8;
     }
 }
 
-.button_settings:active {
+.edit:active {
+    opacity: 0.6;
+}
+
+@media (pointer: fine) {
+    .unpin:hover {
+        background-color: rgba(255, 115, 115, 0.1);
+        
+    }
+}
+
+.unpin:active {
+    background-color: rgba(255, 115, 115, 0.2);
     opacity: 0.8;
 }
 

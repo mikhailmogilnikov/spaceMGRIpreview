@@ -18,6 +18,9 @@ import Menu from "./components/menu_block/Menu";
 import Course from "./components/course_block/Course";
 import Task from "./components/task_block/Task";
 import Settings from "./components/settings_block/Settings";
+import Privacy from "./components/privacy_block/PrivacyLogged";
+import PrivacyLogged from "./components/privacy_block/PrivacyLogged";
+import PrivacyUnlogged from "./components/privacy_block/PrivacyUnlogged";
 
 function App() {
   const location = useLocation();
@@ -42,6 +45,7 @@ function App() {
       location.pathname === '/courses' ||
       location.pathname === '/deadlines' ||
       location.pathname === '/task' ||
+      location.pathname === '/privacy_logged' ||
       location.pathname === '/settings'
     ) {
       setIsLoggedIn(true);
@@ -54,35 +58,37 @@ function App() {
   return (
     <div className="App">
 
-        <ScrollToTop />
+      <ScrollToTop />
 
-        {/* <Sky /> */}
+      {/* <Sky /> */}
 
-        <div className="main_container">
-          <Header isLoggedIn={isLoggedIn} />
+      <div className="main_container">
+        <Header isLoggedIn={isLoggedIn} />
 
-          <main className="content_container">
+        <main className="content_container">
 
-            {isLoggedIn && <Courses />}
+          {isLoggedIn && <Courses />}
 
-            <Routes>
+          <Routes>
 
-              <Route path="/" element={<Schedule />} />
-              <Route path="/menu" element={<Menu handleLogout={handleLogout} />} />
-              <Route path="/course" element={<Course />} />
-              <Route path="/courses" element={<CoursesTablet />} />
-              <Route path="/deadlines" element={<DeadlineTablet />} />
-              <Route path="/task" element={<Task />} />
-              <Route path="/settings" element={<Settings />} />
+            <Route path="/" element={<Schedule />} />
+            <Route path="/menu" element={<Menu handleLogout={handleLogout} />} />
+            <Route path="/course" element={<Course />} />
+            <Route path="/courses" element={<CoursesTablet />} />
+            <Route path="/deadlines" element={<DeadlineTablet />} />
+            <Route path="/task" element={<Task />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/privacy_logged" element={<PrivacyLogged />} />
 
-              <Route path="/enter" element={<Enter handleLogin={handleLogin} />} />
+            <Route path="/enter" element={<Enter handleLogin={handleLogin} />} />
+            <Route path="/privacy" element={<PrivacyUnlogged />} />
 
-            </Routes>
+          </Routes>
 
-            {isLoggedIn && <Deadline />}
+          {isLoggedIn && <Deadline />}
 
-          </main>
-        </div>
+        </main>
+      </div>
     </div>
   );
 }

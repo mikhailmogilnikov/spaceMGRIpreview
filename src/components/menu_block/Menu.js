@@ -112,7 +112,7 @@ const Menu = ({ handleLogout }) => {
 
                 <div className="breaker"></div>
 
-                <NavLink to="/privacy" className="content_elem_row select">
+                <NavLink to="/privacy_logged" className="content_elem_row select">
                     <AsteriskSimple weight="bold" className="icon_mid" />
                     <p>Политика конфиденциальности</p>
                     <CaretRight weight="bold" className="icon_mid" />

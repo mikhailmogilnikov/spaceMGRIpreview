@@ -60,7 +60,7 @@ const AddSolutionModal = ({ setModal, isModal }) => {
                             </div>
 
                         </div>
-                        <div className="button_main">
+                        <div onClick={setModal} className="button_main">
                             <h4 className="text_button_main">Добавить</h4>
                         </div>
                     </div>
