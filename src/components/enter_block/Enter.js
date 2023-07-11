@@ -31,7 +31,7 @@ const Enter = ({handleLogin}) => {
                     <h4 className="text_button_main">Войти</h4>
                 </NavLink>
                 <div className="title_container">
-                    <p className="bottom_text">Вход в приложение осуществляется при помощи учетной записи stud.mgri.ru</p>
+                    <p className="bottom_text">Вход осуществляется при помощи учетной записи stud.mgri.ru</p>
                 </div>
             </div>
 
