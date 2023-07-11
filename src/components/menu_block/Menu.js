@@ -104,7 +104,7 @@ const Menu = ({ handleLogout }) => {
 
           <div className="content_cover">
 
-                <NavLink to="/faq" className="content_elem_row select">
+                <NavLink to="/faq_logged" className="content_elem_row select">
                     <Question weight="bold" className="icon_mid" />
                     <p>Помощь и возможности</p>
                     <CaretRight weight="bold" className="icon_mid" />

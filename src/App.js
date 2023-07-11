@@ -18,9 +18,10 @@ import Menu from "./components/menu_block/Menu";
 import Course from "./components/course_block/Course";
 import Task from "./components/task_block/Task";
 import Settings from "./components/settings_block/Settings";
-import Privacy from "./components/privacy_block/PrivacyLogged";
 import PrivacyLogged from "./components/privacy_block/PrivacyLogged";
 import PrivacyUnlogged from "./components/privacy_block/PrivacyUnlogged";
+import FaqLogged from "./components/faq_block/FaqLogged";
+import FaqUnlogged from "./components/faq_block/FaqUnlogged";
 
 function App() {
   const location = useLocation();
@@ -46,6 +47,7 @@ function App() {
       location.pathname === '/deadlines' ||
       location.pathname === '/task' ||
       location.pathname === '/privacy_logged' ||
+      location.pathname === '/faq_logged' ||
       location.pathname === '/settings'
     ) {
       setIsLoggedIn(true);
@@ -79,9 +81,11 @@ function App() {
             <Route path="/task" element={<Task />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/privacy_logged" element={<PrivacyLogged />} />
+            <Route path="/faq_logged" element={<FaqLogged />} />
 
             <Route path="/enter" element={<Enter handleLogin={handleLogin} />} />
             <Route path="/privacy" element={<PrivacyUnlogged />} />
+            <Route path="/faq" element={<FaqUnlogged />} />
 
           </Routes>
 
