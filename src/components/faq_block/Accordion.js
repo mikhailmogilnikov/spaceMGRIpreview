@@ -1,6 +1,5 @@
 import { Plus } from "@phosphor-icons/react";
 import React, { useState } from "react";
-import { CSSTransition } from "react-transition-group";
 
 const Accordion = (props) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -18,11 +17,9 @@ const Accordion = (props) => {
                     </span>
                     <h4>{props.title}</h4>
                 </div>
-                <CSSTransition in={isExpanded} timeout={700} classNames="accordion-content" unmountOnExit>
-                    <div className="accordion-content low_opacity">
-                        <p className="accordion_text">{props.description}</p>
-                    </div>
-                </CSSTransition>
+                <div className="accordion-content low_opacity">
+                    <p className="accordion_text">{props.description}</p>
+                </div>
             </div>
         </div>
     );
