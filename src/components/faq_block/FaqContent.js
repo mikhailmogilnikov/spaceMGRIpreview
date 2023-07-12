@@ -1,46 +1,48 @@
-import { Plus } from "@phosphor-icons/react";
-import React, { useState } from "react";
-import { CSSTransition } from "react-transition-group";
+import { NavLink } from "react-router-dom";
+import Accordion from "./Accordion";
+import { ArrowSquareOut, LinkSimple } from "@phosphor-icons/react";
 
 const FaqContent = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
 
-  const handleAccordionToggle = () => {
-    setIsExpanded((prevExpanded) => !prevExpanded);
-  };
-
-  return (
-    <div className="element_container">
-      <div className="content_cover">
-        <div className="content_elem_column">
-          <div className="accordion">
-            <div
-              className={`accordion-toggle ${isExpanded ? "expanded" : ""}`}
-              onClick={handleAccordionToggle}
-            >
-              <div className="accordion-title">
-                <span className={`accordion-icon ${isExpanded ? "rotate" : ""}`}>
-                  <Plus weight="bold" className="icon_min" />
-                </span>
-                <h4>Тест</h4>
-              </div>
+    return (
+        <>
+            <div className="element_container">
+                <div className="title_container">
+                    <h3>Часто задаваемые вопросы</h3>
+                </div>
+                <div className="content_cover">
+                    <Accordion title='Что такое Space?' description='Space – это переработанная электронно-образовательная платформа stud.mgri.ru. С помощью приложения Вы сможете достичь самой важной информации в пару действий.' />
+                    <div className="breaker"></div>
+                    <Accordion title='Как добавить приложение на главный экран устройства?' description='Нажать на значок "Поделиться" в браузере. В появившемся меню выбрать опцию "Добавить на главный экран" или "Добавить ярлык". Подтвердите добавление, следуя инструкциям на устройстве.' />
+                    <div className="breaker"></div>
+                    <Accordion title='Не украдут ли данные моего аккаунта?' description='Space напрямую берет информацию из профиля stud и показывает Вам. Почти никакой информации нигде не сохраняется.' />
+                    <div className="breaker"></div>
+                    <Accordion title='Какие данные Вы собираете?' description='Только Ваш ID ученика в stud и закрепленные курсы.' />
+                    <div className="breaker"></div>
+                    <Accordion title='Какие задачи помогает решать приложение?' description='Быстро посмотреть расписание, проверить статус выполнения задания, прикрепить решение или отслеживать ближайшие дедлайны.' />
+                    <div className="breaker"></div>
+                    <Accordion title='Это платно?' description='Нет, за функционал приложения не нужно платить.' />
+                    <div className="breaker"></div>
+                    <Accordion title='Как мне отслеживать нужный курс?' description='Меню > Настройки курсов > Выберите необходимый курс из незакрепленных' />
+                    <div className="breaker"></div>
+                    <Accordion title='Можно ли переименовать курс?' description='Да, в Настройках курсов можно дать удобное название каждому закрепленному курсу.' />
+                </div>
             </div>
-            <CSSTransition
-              in={isExpanded}
-              timeout={300}
-              classNames="accordion-content"
-              unmountOnExit
-            >
-              <div className="accordion-content">
-                <p>Тестbr</p>
-              </div>
-            </CSSTransition>
-          </div>
-        </div>
-        <div className="breaker"></div>
-      </div>
-    </div>
-  );
-};
+            <div className="element_container">
+                <div className="title_container">
+                    <h3>Обратная связь</h3>
+                </div>
+
+                <div className="content_cover">
+                    <NavLink to="https://stud.mgri.ru/WebApp/#/feedback" target="_blank" rel="noreferrer" className="content_elem_row select">
+                        <LinkSimple weight="bold" className="icon_mid" />
+                        <p>Контактный центр МГРИ</p>
+                        <ArrowSquareOut weight="bold" className="icon_mid" />
+                    </NavLink>
+                </div>
+            </div>
+        </>
+    );
+}
 
 export default FaqContent;

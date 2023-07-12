@@ -4,61 +4,52 @@
     height: min-content;
     display: flex;
     flex-direction: column;
-  }
-  
-  .accordion-toggle {
+}
+
+.accordion-toggle {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    height: min-content;
-    background: none;
-    border: none;
-    padding: 0;
-    gap: 15px;
-    cursor: pointer;
-  }
-  
-  .accordion-title {
-    display: flex;
-    flex-direction: row;
     align-items: center;
     width: 100%;
     height: min-content;
     background: none;
     border: none;
     padding: 0;
-    gap: 17px;
-  }
-  
-  .accordion-icon {
+    gap: 15px;
+}
+
+.accordion-icon {
     transition: transform 0.3s ease-out;
     padding-top: 4px;
-  }
-  
-  .accordion-icon.rotate {
+}
+
+.accordion-icon.rotate {
     transform: rotate(45deg);
-  }
-  
-  .accordion-content {
-    display: flex;
-    flex-direction: column;
+}
+
+.accordion-content {
+    max-height: 500px;
+    transition: all 0.7s cubic-bezier(0, 1.07, 0, 0.99);
+    padding-left: 36px;
     overflow: hidden;
-    transition: height 300ms;
-  }
-  
-  .accordion-content-enter {
+}
+
+.accordion-content-enter {
     height: 0;
-  }
-  
-  .accordion-content-enter-active {
-    height: auto;
-  }
-  
-  .accordion-content-exit {
-    height: auto;
-  }
-  
-  .accordion-content-exit-active {
-    height: 0;
-  }
+}
+
+.accordion-content-enter-active {
+    max-height: 500px;
+}
+
+.accordion-content-exit {
+    max-height: 500px;
+}
+
+.accordion-content-exit-active {
+    max-height: 0;
+}
+
+.accordion_text {
+    padding-top: 15px;
+}
+
