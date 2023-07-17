@@ -22,6 +22,7 @@ import PrivacyLogged from "./components/privacy_block/PrivacyLogged";
 import PrivacyUnlogged from "./components/privacy_block/PrivacyUnlogged";
 import FaqLogged from "./components/faq_block/FaqLogged";
 import FaqUnlogged from "./components/faq_block/FaqUnlogged";
+import LoaderBlock from "./components/loader/LoaderBlock";
 
 function App() {
   const location = useLocation();
@@ -48,6 +49,7 @@ function App() {
       location.pathname === '/task' ||
       location.pathname === '/privacy_logged' ||
       location.pathname === '/faq_logged' ||
+      location.pathname === '/loader' ||
       location.pathname === '/settings'
     ) {
       setIsLoggedIn(true);
@@ -82,6 +84,7 @@ function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/privacy_logged" element={<PrivacyLogged />} />
             <Route path="/faq_logged" element={<FaqLogged />} />
+            <Route path="/loader" element={<LoaderBlock />} />
 
             <Route path="/enter" element={<Enter handleLogin={handleLogin} />} />
             <Route path="/privacy" element={<PrivacyUnlogged />} />
