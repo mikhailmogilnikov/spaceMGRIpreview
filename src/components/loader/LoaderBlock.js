@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 import Loader from "./Loader";
+import LoaderTask from "./LoaderTask";
 
 const LoaderBlock = () => {
 
@@ -15,7 +16,7 @@ const LoaderBlock = () => {
                 <h2>3ЛР Механические колебания</h2>
             </NavLink>
 
-            <Loader />
+            <LoaderTask />
 
         </div>
     );
