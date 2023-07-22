@@ -760,8 +760,6 @@ a {
     padding: 7px 10px 0px 10px;
 }
 
-.visible {}
-
 .hidden {
     display: none;
 }
@@ -859,7 +857,7 @@ input::placeholder {
 }
 
 .loader_anim {
-    animation: opacity 1.3s infinite ease-in-out;
+    animation: opacity 1.3 s infinite ease-in-out;
     background-color: var(--var-hover);
 }
 
