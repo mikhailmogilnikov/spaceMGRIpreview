@@ -3,7 +3,7 @@
 @import url("modal.css");
 @import url("settings.css");
 @import url("faq.css");
-@import url('normalize.css');
+@import url("normalize.css");
 
 
 :root {
@@ -16,8 +16,8 @@
     --var-active-element: #919191;
     --var-switcher-bg: #C9C9C9;
     --var-red: #E34A4A;
-    --var-hover: #b8b8b85a;
-    --var-push: #b8b8b885;
+    --var-hover: #e8e8e8;
+    --var-push: #dcdcdc;
     --var-modal-bg: #ffffff;
 }
 
@@ -32,8 +32,8 @@
         --var-active-element: #2B2B2B;
         --var-switcher-bg: #3D3D3D;
         --var-red: #E34A4A;
-        --var-hover: #2b2b2b94;
-        --var-push: #2b2b2bbc;
+        --var-hover: #242424;
+        --var-push: #2a2a2a;
         --var-modal-bg: #121212;
     }
 }
@@ -58,6 +58,7 @@
 *::-webkit-scrollbar-track {
     overflow: overlay;
     background: var(--var-bg);
+
 }
 
 *::-webkit-scrollbar-thumb {
@@ -65,6 +66,20 @@
     background-color: var(--var-text-and-icons);
     border-radius: 5px;
     opacity: 0.3;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px var(--var-elements) inset !important;
+    -webkit-text-fill-color: var(--var-text-and-icons) !important;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 .App {
@@ -140,6 +155,20 @@ p {
     position: relative;
 }
 
+.messages {
+    color: var(--var-bg);
+    font-size: 12px;
+    font-weight: 600;
+    height: min-content;
+    position: absolute;
+    background-color: var(--var-text-and-icons);
+    padding: 5.5px 8px 5px 8px;
+    border-radius: 18px;
+    margin-bottom: 52px;
+    margin-left: 42px;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
 .text_back {
     font-size: 28px;
 }
@@ -164,10 +193,9 @@ p {
 }
 
 .project_title {
-    font-size: 50px;
-    margin-bottom: 8px;
+    font-size: 46px;
+    margin-bottom: 6px;
     user-select: none;
-    cursor: pointer;
 }
 
 .icon_nav {
@@ -290,7 +318,7 @@ body {
 
 .header_container {
     width: 100%;
-    height: 165px;
+    height: 130px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -758,7 +786,10 @@ a {
 .back_container {
     display: flex;
     padding: 7px 10px 0px 10px;
+    cursor: pointer;
 }
+
+.visible {}
 
 .hidden {
     display: none;
@@ -812,6 +843,24 @@ a {
     padding: 0;
 }
 
+.input-big {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    background-color: transparent;
+    color: var(--var-text-and-icons);
+    outline: none;
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+    height: auto;
+    overflow: hidden;
+}
+
 .solo_block {
     margin: 0 auto;
 }
@@ -854,14 +903,14 @@ input::placeholder {
     background-color: var(--var-hover);
     width: 100px;
     height: 24px;
+    opacity: 0.4;
 }
 
 .loader_anim {
-    animation: opacity 1.3 s infinite ease-in-out;
+    animation: opacity 1.5s infinite ease-in-out;
     background-color: var(--var-hover);
+    opacity: 0.4;
 }
-
-
 
 
 @media (max-width: 1360px) {
@@ -871,6 +920,9 @@ input::placeholder {
 }
 
 @media (max-width: 1280px) {
+    .header_container {
+        height: 145px;
+    }
     .content_container {
         justify-content: center;
     }
@@ -898,7 +950,7 @@ input::placeholder {
 
 }
 
-@media (min-width: 601px) {
+@media (min-width: 1281px) {
     @media (pointer: fine) {
         .nav_elem_container:hover {
             background-color: var(--var-hover);
@@ -907,6 +959,17 @@ input::placeholder {
 
     .nav_elem_container:active {
         background-color: var(--var-push);
+    }
+}
+
+@media (min-width: 601px) {
+    .loader_selector {
+        width: 245px;
+        height: 46px;
+        padding: 0px 20px 0px 20px;
+        position: absolute;
+        top: 41px;
+        right: 30px;
     }
 }
 
@@ -920,7 +983,8 @@ input::placeholder {
     }
 
     .project_title {
-        font-size: 40px;
+        font-size: 38px;
+        letter-spacing: -0.3px;
     }
 
     .block {
@@ -954,7 +1018,7 @@ input::placeholder {
         bottom: 20px;
         left: 13%;
         right: auto;
-        z-index: 3;
+        z-index: 4;
         animation: enter 1s cubic-bezier(0, 1.07, 0, 0.99);
     }
 
@@ -991,19 +1055,17 @@ input::placeholder {
     }
 }
 
-
-
 @keyframes opacity {
     0% {
-        opacity: 1;
-    }
-
-    50% {
         opacity: 0.4;
     }
 
-    100% {
+    50% {
         opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
     }
 }
 

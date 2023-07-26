@@ -6,6 +6,8 @@ import Loader from "./Loader";
 import LoaderTask from "./LoaderTask";
 import LoaderSchedule from "./LoaderSchedule";
 import LoaderSettings from "./LoaderSettings";
+import LoaderMenu from "./LoaderMenu";
+import LoaderCourse from "./LoaderCourse";
 
 const LoaderBlock = () => {
 
@@ -19,7 +21,7 @@ const LoaderBlock = () => {
 
 
 
-            <div className="title_container">
+            {/* <div className="title_container">
                 <h1>Расписание</h1>
             </div>
 
@@ -27,7 +29,7 @@ const LoaderBlock = () => {
                 <CalendarBlank weight="bold" className="icon_mid" />
                 <h4 className="date">20.06.2023</h4>
                 <CaretDown weight="bold" className="icon_mid" />
-            </div>
+            </div> */}
 
 
 
@@ -40,11 +42,16 @@ const LoaderBlock = () => {
                 <h2>Настройка курсов</h2>
             </NavLink> */}
 
+            <div className="title_container">
+                <h1>Меню</h1>
+            </div>
 
-            
+
             {/* <LoaderTask /> */}
-            <LoaderSchedule />
+            {/* <LoaderSchedule /> */}
             {/* <LoaderSettings /> */}
+            {/* <LoaderMenu /> */}
+            <LoaderCourse />
 
         </div>
     );
