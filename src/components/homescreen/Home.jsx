@@ -26,7 +26,7 @@ const Home = () => {
 				<h4 className='header-button-text'>Войти</h4>
 			</NavLink>
 			<div className='big-letters-wrapper'>
-				<h2 className='big-letters'>Достигать цели.</h2>
+				<h2 className='big-letters'>Достигать целей.</h2>
 				<h2 className='big-letters'>Быстрее.</h2>
 			</div>
 
@@ -45,7 +45,7 @@ const Home = () => {
 				</div>
 			</div>
 
-			<div className='small-letters-wrapper'>
+			<div className='small-letters-wrapper' style={{paddingTop: '70px'}}>
 				<div className='vert-line'></div>
 			</div>
 
