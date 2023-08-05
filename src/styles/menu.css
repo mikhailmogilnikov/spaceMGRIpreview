@@ -43,7 +43,7 @@
 .switcher_body {
     box-sizing: border-box;
     flex-shrink: 0;
-    width: 55px;
+    width: 52px;
     height: 30px;
     display: flex;
     flex-direction: row;
@@ -69,6 +69,13 @@
     overflow: visible;
     position: relative;
     border-radius: 80px;
+
+    transition: transform 0.25s ease;
+    transform: translateX(2%);
+}
+
+.active-switcher {
+    transform: translateX(89%);
 }
 
 .exit_button {

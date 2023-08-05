@@ -23,6 +23,7 @@ import PrivacyUnlogged from "./components/privacy_block/PrivacyUnlogged";
 import FaqLogged from "./components/faq_block/FaqLogged";
 import FaqUnlogged from "./components/faq_block/FaqUnlogged";
 import LoaderBlock from "./components/loader/LoaderBlock";
+import Home from "./components/homescreen/Home.jsx";
 
 function App() {
   const location = useLocation();
@@ -86,6 +87,7 @@ function App() {
             <Route path="/faq_logged" element={<FaqLogged />} />
             <Route path="/loader" element={<LoaderBlock />} />
 
+            <Route path="/home" element={<Home />} />
             <Route path="/enter" element={<Enter handleLogin={handleLogin} />} />
             <Route path="/privacy" element={<PrivacyUnlogged />} />
             <Route path="/faq" element={<FaqUnlogged />} />
