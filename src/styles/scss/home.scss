@@ -186,6 +186,11 @@
 	.header-button {
 		right: 20px;
 	}
+}
+
+
+@media (max-width: 1220px) {
+
 
 	.content-element {
 		flex-direction: column;
@@ -195,6 +200,14 @@
 
 	.right-pos {
 		align-items: center;
+	}
+
+	.left-pos {
+		align-items: center;
+	}
+
+	.course-break {
+		padding-top: 50px;
 	}
 
 	.text-mid {

@@ -22,7 +22,7 @@ const CoursePreview = () => {
 
                     <div className="content_elem_row ">
                         <div className="content_inner_column">
-                            <h4>1ЛР Механические колебания</h4>
+                            <h4>1ЛР Сейсмограмма прямой волны</h4>
                             <div className="lighter lect">
                                 <Check weight="bold" className="icon_min text_lighter" />
                                 <p className="text_lighter">Выполнено</p>
@@ -35,7 +35,7 @@ const CoursePreview = () => {
 
                     <div className="content_elem_row ">
                         <div className="content_inner_column">
-                            <h4>2ЛР Магнитные колебания</h4>
+                            <h4>2ЛР Затухающее колебательное движение</h4>
                             <div className="lighter exam">
                                 <Clock weight="bold" className="icon_min text_lighter" />
                                 <p className="text_lighter">В проверке</p>

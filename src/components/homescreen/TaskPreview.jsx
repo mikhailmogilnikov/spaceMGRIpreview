@@ -59,7 +59,7 @@ const TaskPreview = () => {
 							</div>
 							<div className='container_row_start extended_gap'>
 								<CalendarBlank weight='bold' className='icon_min' />
-								<p>06.02.2023 - 02.03.2023</p>
+								<p>06.10.2023 - 17.03.2023</p>
 							</div>
 						</div>
 					</div>

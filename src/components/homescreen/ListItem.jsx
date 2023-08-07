@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { Check, Clock, CaretRight, ClockClockwise, Fire, FireSimple, Palette, PaintBrush, StarFour, PencilSimple, ClockCountdown, Plus, DownloadSimple, CloudArrowUp, ClockAfternoon, MoonStars, Files } from "@phosphor-icons/react";
+import { ClockClockwise, FireSimple, PaintBrush, StarFour, PencilSimple, ClockCountdown, DownloadSimple, CloudArrowUp, ClockAfternoon, MoonStars, Files } from "@phosphor-icons/react";
 
 const ListItemWrapper = styled.div`
 	width: 500px;
@@ -9,11 +9,15 @@ const ListItemWrapper = styled.div`
 	gap: 20px;
 	padding-left: 70px;
 
-	@media (max-width: 1360px) {
+	@media (max-width: 1220px) {
 		align-items: center;
 		padding-left: 0px;
+	}
+	@media (max-width: 600px) {
 		width: 100%
 	}
+
+
 `
 const IconContainer = styled.div`
 	background-color: var(--var-hover);

@@ -9,16 +9,27 @@ const Home = () => {
 	useEffect(() => {
 		const headerButton = document.querySelector('.header-button')
 		window.addEventListener('scroll', handleScroll)
-
+	
 		function handleScroll() {
 			const scrollY = window.scrollY
-			if (scrollY >= 600 & scrollY <= 6200) {
-				headerButton.classList.add('visible')
+			const windowWidth = window.innerWidth
+	
+			if (windowWidth >= 1220) {
+				if (scrollY >= 600 && scrollY <= 3800) {
+					headerButton.classList.add('visible')
+				} else {
+					headerButton.classList.remove('visible')
+				}
 			} else {
-				headerButton.classList.remove('visible')
+				// Старое условие для ширины экрана < 1360
+				if (scrollY >= 600 && scrollY <= 5900) {
+					headerButton.classList.add('visible')
+				} else {
+					headerButton.classList.remove('visible')
+				}
 			}
 		}
-
+	
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
@@ -82,7 +93,7 @@ const Home = () => {
 						<ListItem
 							icon='PaintBrush'
 							title='Сохранение акцентов'
-							description='Привычные цвета для обозначения типа занятия остались. Слегка более подобранные.'
+							description='Привычные цвета для обозначений типов занятий. Слегка более подобранные.'
 						/>
 					</div>
 				</div>
@@ -121,8 +132,8 @@ const Home = () => {
 						/>
 					</div>
 					<div
-						className='content-part schedule-break left-pos'
-						style={{ 'justify-content': 'start' }}
+						className='content-part schedule-break left-pos course-break'
+						style={{ 'justify-content': 'start'}}
 					>
 						<div className='fader'></div>
 						<CoursePreview />
@@ -140,8 +151,7 @@ const Home = () => {
 						<h4 className='content-title'>Большие возможности</h4>
 						<p className='small-letters low_opacity text-center'>
 							Space напрямую взаимодействует с электронно-образовательной
-							платформой, что позволяет не только брать данные, но и отправлять
-							собственные.
+							платформой, что позволяет использовать весь её функционал.
 						</p>
 					</div>
 				</div>
@@ -159,12 +169,12 @@ const Home = () => {
 						<ListItem
 							icon='DownloadSimple'
 							title='Скачивание и предпросмотр'
-							description='Любые файлы и ссылки можно загрузить или по возможности открыть прямо в браузере.'
+							description='Любые файлы и ссылки можно загрузить на устройство или по возможности открыть прямо в браузере.'
 						/>
 						<ListItem
 							icon='Files'
 							title='Материалы курса'
-							description='Для удобства использования, добавленные преподавателями материалы доступны без ограничений как в курсе, так и в любом задании.'
+							description='Для удобства использования, добавленные преподавателями материалы доступны как в курсе, так и в любом задании.'
 						/>
 						{/* <ListItem
 							icon='ClockAfternoon'
@@ -174,7 +184,7 @@ const Home = () => {
 						<ListItem
 							icon='MoonStars'
 							title='Оформление на свой вкус'
-							description='Можете переключаться между светлым и тёмным оформлением, а так же включать звездное небо.'
+							description='На выбор – светлая и тёмная тема, а так же возможность включать или отключать анимированный звёздный фон.'
 						/>
 					</div>
 				</div>
