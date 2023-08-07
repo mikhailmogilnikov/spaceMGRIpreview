@@ -27,7 +27,7 @@ const Enter = ({handleLogin}) => {
                         />
                     </div>
                 </div>
-                <NavLink to={'/'} onClick={handleLogin} className="button_main">
+                <NavLink to={'/schedule'} onClick={handleLogin} className="button_main">
                     <h4 className="text_button_main">Войти</h4>
                 </NavLink>
                 <div className="title_container">

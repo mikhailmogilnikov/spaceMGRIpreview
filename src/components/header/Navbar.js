@@ -14,7 +14,7 @@ const Navbar = () => {
 
                 <div className="nav_bar nav_bar_mobile">
 
-                    <NavLink to="/" className="nav_elem_container nav_bar_mobile_container">
+                    <NavLink to="/schedule" className="nav_elem_container nav_bar_mobile_container">
                         <CalendarBlank weight="bold" className="icon_nav icon_nav_mobile" />
                     </NavLink>
 

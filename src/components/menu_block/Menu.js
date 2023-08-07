@@ -168,7 +168,7 @@ const Menu = ({ handleLogout }) => {
 
         </div>
 
-        <NavLink to="/enter" onClick={handleLogout} className="exit_button">
+        <NavLink to="/" onClick={handleLogout} className="exit_button">
             <h3 className="exit_text">Выйти</h3>
         </NavLink>
 

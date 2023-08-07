@@ -42,7 +42,7 @@ function App() {
   useEffect(() => {
     // Проверка пути URL и установка значения isLoggedIn
     if (
-      location.pathname === '/' ||
+      location.pathname === '/schedule' ||
       location.pathname === '/menu' ||
       location.pathname === '/course' ||
       location.pathname === '/courses' ||
@@ -76,7 +76,7 @@ function App() {
 
           <Routes>
 
-            <Route path="/" element={<Schedule />} />
+            <Route path="/schedule" element={<Schedule />} />
             <Route path="/menu" element={<Menu handleLogout={handleLogout} />} />
             <Route path="/course" element={<Course />} />
             <Route path="/courses" element={<CoursesTablet />} />
@@ -87,7 +87,7 @@ function App() {
             <Route path="/faq_logged" element={<FaqLogged />} />
             <Route path="/loader" element={<LoaderBlock />} />
 
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/enter" element={<Enter handleLogin={handleLogin} />} />
             <Route path="/privacy" element={<PrivacyUnlogged />} />
             <Route path="/faq" element={<FaqUnlogged />} />

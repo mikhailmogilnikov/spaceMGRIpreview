@@ -8,9 +8,9 @@ const Schedule = () => {
       </div>
 
       <div className="calendar_block select">
-        <CalendarBlank weight="bold" className="icon_mid" />
+        <CalendarBlank weight="bold" className="icon_min" />
         <h4 className="date">20.06.2023</h4>
-        <CaretDown weight="bold" className="icon_mid" />
+        <CaretDown weight="bold" className="icon_min" />
       </div>
 
       <div className="element_container">
