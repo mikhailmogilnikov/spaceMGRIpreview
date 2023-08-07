@@ -108,7 +108,7 @@ const Home = () => {
 					<div className='content-part'>
 						<h4 className='content-title'>Новое видение курсов</h4>
 						<p className='small-letters low_opacity text-center'>
-							Два действия чтобы увидеть статус выполнения всех заданий. Space
+							Два нажатия, чтобы увидеть статус выполнения заданий. Space
 							переизобретает пользовательский опыт stud.
 						</p>
 					</div>
