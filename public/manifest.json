@@ -14,7 +14,6 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
-  "theme": "#000000",
-  "background": "#000000"
+  "display": "fullscreen",
+  "background_color": "#000000"
 }
