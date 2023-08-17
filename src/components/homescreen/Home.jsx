@@ -5,15 +5,18 @@ import ListItem from './ListItem'
 import CoursePreview from './CoursePreview'
 import TaskPreview from './TaskPreview'
 
+import '../../styles/scss/home.scss'
+import GeoLabs from './Geolabs'
+
 const Home = () => {
 	useEffect(() => {
 		const headerButton = document.querySelector('.header-button')
 		window.addEventListener('scroll', handleScroll)
-	
+
 		function handleScroll() {
 			const scrollY = window.scrollY
 			const windowWidth = window.innerWidth
-	
+
 			if (windowWidth >= 1220) {
 				if (scrollY >= 600 && scrollY <= 3800) {
 					headerButton.classList.add('visible')
@@ -29,7 +32,7 @@ const Home = () => {
 				}
 			}
 		}
-	
+
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
@@ -42,13 +45,13 @@ const Home = () => {
 			</NavLink>
 			<div className='big-letters-wrapper'>
 				<h2 className='big-letters'>Достигать целей.</h2>
-				<h2 className='big-letters'>Быстрее.</h2>
+				<h2 className='big-letters'>По-новому.</h2>
 			</div>
 
 			<div className='small-letters-wrapper'>
 				<h3 className='small-letters low_opacity'>
-					Space дает студентам возможность по-новому взглянуть на
-					электронно-образовательную платформу МГРИ.
+					Глобальное дополнение к электронно-образовательной платформе МГРИ,
+					упрощающее взаимодействие между пользователем и системой.
 				</h3>
 			</div>
 
@@ -106,7 +109,7 @@ const Home = () => {
 			<div className='content-block'>
 				<div className='content-element'>
 					<div className='content-part'>
-						<h4 className='content-title'>Новое видение курсов</h4>
+						<h4 className='content-title'>Другое видение курсов</h4>
 						<p className='small-letters low_opacity text-center'>
 							Два нажатия, чтобы увидеть статус выполнения заданий. Space
 							переизобретает пользовательский опыт stud.
@@ -133,7 +136,7 @@ const Home = () => {
 					</div>
 					<div
 						className='content-part schedule-break left-pos course-break'
-						style={{ 'justify-content': 'start'}}
+						style={{ 'justify-content': 'start' }}
 					>
 						<div className='fader'></div>
 						<CoursePreview />
@@ -203,6 +206,12 @@ const Home = () => {
 						<h4 className='text_button_main'>Войти</h4>
 					</NavLink>
 				</div>
+			</div>
+
+
+			<div className='small-letters-wrapper'>
+				<h2 style={{marginBottom: '10px'}}>Разработано студией</h2>
+				<GeoLabs />
 			</div>
 		</div>
 	)

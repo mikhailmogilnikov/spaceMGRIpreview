@@ -1,4 +1,4 @@
-import { EnvelopeSimple, CalendarBlank, StarFour, ClockCountdown, List, } from "@phosphor-icons/react";
+import { EnvelopeSimple, CalendarBlank, StarFour, CrownSimple, List, } from "@phosphor-icons/react";
 
 import { NavLink } from "react-router-dom";
 
@@ -23,8 +23,8 @@ const Navbar = () => {
                         <StarFour weight="bold" className="icon_nav icon_nav_mobile" />
                     </NavLink>
 
-                    <NavLink to="/deadlines" className="nav_elem_container nav_tablet nav_bar_mobile_container">
-                        <ClockCountdown weight="bold" className="icon_nav icon_nav_mobile" />
+                    <NavLink to="/bonuses" className="nav_elem_container nav_bar_mobile_container">
+                        <CrownSimple weight="bold" className="icon_nav icon_nav_mobile" />
                     </NavLink>
 
                     <NavLink to="/menu" className="nav_elem_container nav_bar_mobile_container">

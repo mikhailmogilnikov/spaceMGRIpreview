@@ -5,6 +5,7 @@ const Courses = () => {
     <div className="block edge_block">
       <CoursesInner />
     </div>
+    
   );
 }
 

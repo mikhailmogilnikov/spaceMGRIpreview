@@ -15,5 +15,6 @@
   ],
   "start_url": ".",
   "display": "fullscreen",
-  "background_color": "black"
+  "background_color": "black",
+  "background": "black"
 }

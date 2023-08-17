@@ -9,7 +9,6 @@ import ScrollToTop from "./components/scroll_to_top/ScrollToTop";
 import Sky from "./components/sky/Sky";
 import Header from "./components/header/Header.js"
 import CoursesTablet from "./components/courses_block/CoursesTablet";
-import DeadlineTablet from "./components/deadline_block/DeadlineTablet";
 import Enter from "./components/enter_block/Enter";
 import Courses from "./components/courses_block/Courses";
 import Deadline from "./components/deadline_block/Deadline";
@@ -24,6 +23,9 @@ import FaqLogged from "./components/faq_block/FaqLogged";
 import FaqUnlogged from "./components/faq_block/FaqUnlogged";
 import LoaderBlock from "./components/loader/LoaderBlock";
 import Home from "./components/homescreen/Home.jsx";
+import CreditsLogged from './components/credits_block/CreditsLogged'
+import CreditsUnlogged from './components/credits_block/CreditsUnlogged'
+import Bonuses from './components/bonuses_block/Bonuses'
 
 function App() {
   const location = useLocation();
@@ -46,10 +48,11 @@ function App() {
       location.pathname === '/menu' ||
       location.pathname === '/course' ||
       location.pathname === '/courses' ||
-      location.pathname === '/deadlines' ||
+      location.pathname === '/bonuses' ||
       location.pathname === '/task' ||
       location.pathname === '/privacy_logged' ||
       location.pathname === '/faq_logged' ||
+      location.pathname === '/credits_logged' ||
       location.pathname === '/loader' ||
       location.pathname === '/settings'
     ) {
@@ -80,17 +83,19 @@ function App() {
             <Route path="/menu" element={<Menu handleLogout={handleLogout} />} />
             <Route path="/course" element={<Course />} />
             <Route path="/courses" element={<CoursesTablet />} />
-            <Route path="/deadlines" element={<DeadlineTablet />} />
+            <Route path="/bonuses" element={<Bonuses />} />
             <Route path="/task" element={<Task />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/privacy_logged" element={<PrivacyLogged />} />
             <Route path="/faq_logged" element={<FaqLogged />} />
+            <Route path="/credits_logged" element={<CreditsLogged />} />
             <Route path="/loader" element={<LoaderBlock />} />
 
             <Route path="/" element={<Home />} />
             <Route path="/enter" element={<Enter handleLogin={handleLogin} />} />
             <Route path="/privacy" element={<PrivacyUnlogged />} />
             <Route path="/faq" element={<FaqUnlogged />} />
+            <Route path="/credits" element={<CreditsUnlogged />} />
 
           </Routes>
 

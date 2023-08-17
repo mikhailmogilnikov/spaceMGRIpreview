@@ -1,12 +1,18 @@
-import DeadlineInner from "./DeadlineInner";
+import DeadlineInner from './DeadlineInner'
+import { ClockCountdown } from '@phosphor-icons/react'
 
 const Deadline = () => {
+	return (
+		<div className='block'>
+			<div className='element_container'>
+				<div className='title_container'>
+					<ClockCountdown weight='fill' className='icon_min' />
+					<h3>Закреплено</h3>
+				</div>
+				<DeadlineInner />
+			</div>
+		</div>
+	)
+}
 
-    return (
-        <div className="block">
-            <DeadlineInner />
-        </div>
-     )
-};
- 
-export default Deadline;
+export default Deadline

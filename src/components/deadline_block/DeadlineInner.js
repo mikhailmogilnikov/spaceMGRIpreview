@@ -4,10 +4,6 @@ import { NavLink } from "react-router-dom";
 const DeadlineInner = () => {
     return (
         <>
-            <div className="title_container">
-                <h1>Ближайшие дедлайны</h1>
-            </div>
-
             <div className="deadline_row_container">
                 
                 <NavLink to={'/task'} className="content_cover select">

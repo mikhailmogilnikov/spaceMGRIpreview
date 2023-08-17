@@ -3,7 +3,6 @@
 @import url('modal.css');
 @import url('settings.css');
 @import url('faq.css');
-@import url('./scss/home.css');
 
 @import url('normalize.css');
 
@@ -22,24 +21,26 @@
 	--var-push: #dcdcdc;
 	--var-modal-bg: #ffffff;
 	--var-shadow: #00000060;
+	--bonus-icon: rgba(0, 0, 0, 0.07);
 }
 
 @media (prefers-color-scheme: dark) {
-:root {
-	--var-bg: #000000;
-	--var-block: #121212;
-	--var-text-and-icons: #ffffff;
-	--var-elements: #1d1d1d;
-	--var-deadline-button: #383838;
-	--var-mobile-nav-bar: #000000b3;
-	--var-active-element: #2b2b2b;
-	--var-switcher-bg: #3d3d3d;
-	--var-red: #e34a4a;
-	--var-hover: #242424;
-	--var-push: #2a2a2a;
-	--var-modal-bg: #121212;
-	--var-shadow: #ffffff45;
-}
+	:root {
+		--var-bg: #000000;
+		--var-block: #121212;
+		--var-text-and-icons: #ffffff;
+		--var-elements: #1d1d1d;
+		--var-deadline-button: #383838;
+		--var-mobile-nav-bar: #000000b3;
+		--var-active-element: #2b2b2b;
+		--var-switcher-bg: #3d3d3d;
+		--var-red: #e34a4a;
+		--var-hover: #242424;
+		--var-push: #2a2a2a;
+		--var-modal-bg: #121212;
+		--var-shadow: #ffffff45;
+		--bonus-icon: rgba(255, 255, 255, 0.07);
+	}
 }
 
 /*@media (prefers-color-scheme: dark) {*/
@@ -940,6 +941,10 @@ input::placeholder {
 		justify-content: center;
 	}
 
+	.deadline_row_container {
+		gap: 20px;
+	}
+
 	.nav_tablet {
 		display: flex;
 	}
@@ -949,7 +954,8 @@ input::placeholder {
 	}
 
 	.course_list_item {
-		padding: 16px 12px 16px 16px;
+		padding: 20px;
+		border-radius: 20px;
 	}
 
 	.desktop_only {
