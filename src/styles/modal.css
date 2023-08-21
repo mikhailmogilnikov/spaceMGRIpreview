@@ -4,7 +4,7 @@
 
 .modal_bg_anim-enter-active {
     opacity: 1;
-    transition: all 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
 }
   
 .modal_bg_anim-exit {
@@ -14,7 +14,7 @@
 .modal_bg_anim-exit-active {
     opacity: 0;
     display: none;
-    transition: all 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
 }
 
 .modal_bg_anim-exit-done {
@@ -30,21 +30,17 @@
 
 .modal_anim-enter-active {
     transform: translateY(0%);
-    transition: all 1s cubic-bezier(0, 1.07, 0, 0.99);
-}
-  
-.modal_anim-exit {
-
+    transition: transform 1s cubic-bezier(0, 1, 0, 1);
 }
 
 .modal_anim-exit-active {
     transform: translateY(150%);
-    transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+    transition: transform 0.5s cubic-bezier(1, 0, 1, 0);
 }
 
 .modal_anim-exit-done {
     transform: translateY(150%);
-
+    display: none;
 }
 
 
@@ -63,6 +59,9 @@
     cursor: pointer;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+
+    will-change: opacity;
+    transform-style: preserve-3d;
 }
 
 .modal {
@@ -77,8 +76,6 @@
     display: flex;
     flex-direction: column;
     background-color: var(--var-modal-bg);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
     margin: auto;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -87,6 +84,9 @@
 
     padding: 34px 20px;
     gap: 40px;
+
+    transform-style: preserve-3d;
+    will-change: transform;
 }
 
 .modal_title_text {

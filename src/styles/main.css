@@ -406,6 +406,12 @@ body {
 	display: none;
 }
 
+.nav-mgri-logo {
+	width: 56px;
+	height: auto;
+	fill: var(--var-text-and-icons);
+}
+
 a {
 	text-decoration-line: none;
 }
@@ -427,6 +433,8 @@ a {
 	gap: 45px;
 	border-radius: 23px;
 	overflow: hidden;
+
+	animation: enterBlock 2s cubic-bezier(0, 1, 0, 1), enterOpacity 0.2s linear;
 }
 
 .edge_block {
@@ -595,7 +603,7 @@ a {
 	overflow: hidden;
 	position: relative;
 	align-content: flex-start;
-	border-radius: 14px;
+	border-radius: 16px;
 }
 
 .content_elem_column {
@@ -1029,7 +1037,7 @@ input::placeholder {
 		align-content: center;
 		flex-wrap: nowrap;
 		gap: 0;
-		border-radius: 17px;
+		border-radius: 18px;
 		position: fixed;
 		bottom: 20px;
 		left: 13%;
@@ -1044,7 +1052,8 @@ input::placeholder {
 		width: 100%;
 		height: 100%;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
+		gap: 5px;
 		justify-content: center;
 		align-items: center;
 		position: relative;
@@ -1052,11 +1061,21 @@ input::placeholder {
 		align-content: center;
 		flex-wrap: nowrap;
 		cursor: pointer;
+		text-align: center;
+	}
+
+	.nav-mgri-logo {
+		width: 46px;
+		margin-bottom: 1px;
 	}
 
 	.icon_nav_mobile {
 		font-size: 28px;
 		color: var(--var-text-and-icons);
+	}
+
+	.nav-text-mini{
+	font-size: 10px;
 	}
 }
 
@@ -1067,6 +1086,26 @@ input::placeholder {
 
 	100% {
 		transform: translateY(0);
+	}
+}
+
+@keyframes enterBlock {
+	0% {
+		transform: translateY(30px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes enterOpacity {
+	0% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }
 

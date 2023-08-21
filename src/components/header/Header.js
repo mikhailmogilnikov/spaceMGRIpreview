@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import MgriLogo from './MgriLogo'
 
 function Header({ isLoggedIn }) {
     return (
@@ -7,6 +8,7 @@ function Header({ isLoggedIn }) {
             <h1 className="project_title">Space</h1>
 
             {isLoggedIn && <Navbar />}
+            {isLoggedIn === false && <MgriLogo/>}
 
         </header>
     );

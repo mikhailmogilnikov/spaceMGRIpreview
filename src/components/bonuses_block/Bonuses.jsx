@@ -1,28 +1,28 @@
 import {
-	Question,
 	CaretRight,
 	Coins,
-	Trophy,
+	Question,
 	Receipt,
+	Trophy,
 } from '@phosphor-icons/react'
 
-import '../../styles/scss/bonuses.scss'
-import { NavLink } from 'react-router-dom'
-import { initialItems } from '../../storage/initItems'
 import { useState } from 'react'
-import ItemPreview from './ItemPreview'
+import { NavLink } from 'react-router-dom'
 import { initialEvents } from '../../storage/initEvents'
+import { initialShop } from '../../storage/initShops'
+import '../../styles/scss/bonuses.scss'
 import EventPreview from './EventsPreview'
+import ShopPreview from './ShopPreview'
 
 const Bonuses = () => {
-	const [items, setItems] = useState(initialItems)
-	const [events, setEvents] = useState(initialEvents)
+	const [shops] = useState(initialShop)
+	const [events] = useState(initialEvents)
 
 	return (
 		<div className='block' style={{ padding: '0' }}>
 			<div className='bonus-block'>
 				<div className='title_container'>
-					<h1>Бонусы</h1>
+					<h1>Мои бонусы</h1>
 				</div>
 
 				<div className='bonus-wrapper'>
@@ -36,53 +36,53 @@ const Bonuses = () => {
 
 				<div className='element_container' style={{ gap: '20px' }}>
 					<div className='content_cover large-rounded'>
-						<NavLink to={''} className='content_elem_row select'>
+						<NavLink to={'./faq'} className='content_elem_row select'>
 							<Question weight='bold' className='icon_mid' />
 							<p>Как получить</p>
 							<CaretRight weight='bold' className='icon_mid' />
 						</NavLink>
 					</div>
 					<div className='bonus-flex-wrapper'>
-						<div className='bonus-flex-item'>
+						<NavLink to={'./history'} className='bonus-flex-item'>
 							<h4>
 								История
 								<br /> операций
 							</h4>
 							<Receipt weight='fill' className='bonus-icon' />
-						</div>
-						<div className='bonus-flex-item'>
+						</NavLink>
+						<NavLink to={'./leaderboard'} className='bonus-flex-item'>
 							<h4>
 								Таблицы
 								<br /> лидеров
 							</h4>
 							<Trophy weight='fill' className='bonus-icon' />
-						</div>
+						</NavLink>
 					</div>
 				</div>
 			</div>
 			<div className='bonus-preview-block'>
 				<div className='element_container'>
-					<div className='title_container bonus-title'>
+					<NavLink to={'./spend'} className='title_container bonus-title'>
 						<h3>Потратить</h3>
-						<div className='bubble-text'>24</div>
+						<div className='bubble-text'>{shops.length}</div>
 						<CaretRight weight='bold' className='icon_mid' />
-					</div>
+					</NavLink>
 					<div className='bonus-preview-wrapper'>
-						{items.map(item => (
-							<ItemPreview item={item} />
+						{shops.slice(0, 4).map(shop => (
+							<ShopPreview key={shop.id} shop={shop} />
 						))}
 					</div>
 				</div>
 
 				<div className='element_container'>
-					<div className='title_container bonus-title'>
+					<NavLink to={'./events'} className='title_container bonus-title'>
 						<h3>События</h3>
-						<div className='bubble-text'>9</div>
+						<div className='bubble-text'>{events.length}</div>
 						<CaretRight weight='bold' className='icon_mid' />
-					</div>
+					</NavLink>
 					<div className='bonus-preview-wrapper'>
-						{events.map(event => (
-							<EventPreview event={event} />
+						{events.slice(0, 4).map(event => (
+							<EventPreview key={event.name}  event={event} />
 						))}
 					</div>
 				</div>

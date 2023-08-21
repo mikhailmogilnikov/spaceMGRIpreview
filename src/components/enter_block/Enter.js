@@ -28,7 +28,7 @@ const Enter = ({handleLogin}) => {
                     </div>
                 </div>
                 <NavLink to={'/schedule'} onClick={handleLogin} className="button_main">
-                    <h4 className="text_button_main">Войти</h4>
+                    <h4 className="text_button_main">Войти (Демо)</h4>
                 </NavLink>
                 <div className="title_container">
                     <p className="bottom_text">Вход осуществляется при помощи учетной записи stud.mgri.ru</p>

@@ -1,20 +1,23 @@
-import { CaretLeft } from "@phosphor-icons/react";
-import { NavLink } from "react-router-dom";
+import { CaretLeft } from '@phosphor-icons/react'
+import { useNavigate } from 'react-router-dom'
 import CreditsContent from './CreditsContent'
 
 const CreditsUnlogged = () => {
-    return ( 
-        <div className="block solo_block">
+	const navigate = useNavigate()
 
-            <NavLink to={'/enter'} className="title_container back_container">
-                <CaretLeft weight="bold" className="icon_mid" />
-                <h2>Авторы</h2>
-            </NavLink>
+	return (
+		<div className='block solo_block'>
+			<div
+				className='title_container back_container'
+				onClick={() => navigate(-1)}
+			>
+				<CaretLeft weight='bold' className='icon_mid' />
+				<h2>Авторы</h2>
+			</div>
 
-            <CreditsContent />
-
-        </div>
-     );
+			<CreditsContent />
+		</div>
+	)
 }
- 
-export default CreditsUnlogged;
+
+export default CreditsUnlogged

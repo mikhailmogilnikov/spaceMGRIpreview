@@ -51,7 +51,7 @@ const Home = () => {
 			<div className='small-letters-wrapper'>
 				<h3 className='small-letters low_opacity'>
 					Глобальное дополнение к электронно-образовательной платформе МГРИ,
-					упрощающее взаимодействие между пользователем и системой.
+					помогающее студентам решать частые задачи быстрее и удобнее.
 				</h3>
 			</div>
 
@@ -209,9 +209,9 @@ const Home = () => {
 			</div>
 
 
-			<div className='small-letters-wrapper'>
-				<h2 style={{marginBottom: '10px'}}>Разработано студией</h2>
-				<GeoLabs />
+			<div className='small-letters-wrapper' style={{gap: '10px'}}>
+				<h4 style={{marginBottom: '10px'}}>Разработано в студии</h4>
+				<GeoLabs 	/>
 			</div>
 		</div>
 	)

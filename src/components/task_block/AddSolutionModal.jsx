@@ -4,11 +4,11 @@ import { CSSTransition } from "react-transition-group";
 const AddSolutionModal = ({ setModal, isModal }) => {
     return (
         <div className="modal_wrapper">
-            <CSSTransition in={isModal} classNames={'modal_bg_anim'} timeout={1000} mountOnEnter>
+            <CSSTransition in={isModal} classNames={'modal_bg_anim'} timeout={200} unmountOnExit>
                 <div onClick={setModal} className="modal_bg"></div>
             </CSSTransition>
 
-            <CSSTransition in={isModal} timeout={1000} classNames={'modal_anim'} mountOnEnter>
+            <CSSTransition in={isModal} timeout={1000} classNames={'modal_anim'} unmountOnExit>
                 <div className="modal">
                     <div className="title_container">
                         <Paperclip weight="bold" className="icon_mid" size={"28px"} />

@@ -79,6 +79,14 @@ const Menu = ({ handleLogout }) => {
 
 				<div className='content_cover'>
 					<div className='content_elem_row'>
+						<p>Показывать количество непрочитанных писем</p>
+						<div className='switcher_body'>
+							<div className='switcher'></div>
+						</div>
+					</div>
+				</div>
+				<div className='content_cover'>
+					<div className='content_elem_row'>
 						<p>Анимированный фон</p>
 						<div className='switcher_body'>
 							<div className='switcher'></div>
@@ -88,7 +96,7 @@ const Menu = ({ handleLogout }) => {
 					<div className='breaker'></div>
 
 					<div className='content_elem_row'>
-						<p>Показывать количество непрочитанных писем</p>
+						<p>Плавные переходы</p>
 						<div className='switcher_body'>
 							<div className='switcher'></div>
 						</div>

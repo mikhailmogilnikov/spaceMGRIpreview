@@ -1,110 +1,69 @@
-import "./styles/main.css";
-import "./styles/schedule.css";
+import './styles/main.css'
+import './styles/schedule.css'
 
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
-import ScrollToTop from "./components/scroll_to_top/ScrollToTop";
+import ScrollToTop from './components/scroll_to_top/ScrollToTop'
 
-import Sky from "./components/sky/Sky";
-import Header from "./components/header/Header.js"
-import CoursesTablet from "./components/courses_block/CoursesTablet";
-import Enter from "./components/enter_block/Enter";
-import Courses from "./components/courses_block/Courses";
-import Deadline from "./components/deadline_block/Deadline";
-import Schedule from "./components/schedule_block/Schedule";
-import Menu from "./components/menu_block/Menu";
-import Course from "./components/course_block/Course";
-import Task from "./components/task_block/Task";
-import Settings from "./components/settings_block/Settings";
-import PrivacyLogged from "./components/privacy_block/PrivacyLogged";
-import PrivacyUnlogged from "./components/privacy_block/PrivacyUnlogged";
-import FaqLogged from "./components/faq_block/FaqLogged";
-import FaqUnlogged from "./components/faq_block/FaqUnlogged";
-import LoaderBlock from "./components/loader/LoaderBlock";
-import Home from "./components/homescreen/Home.jsx";
-import CreditsLogged from './components/credits_block/CreditsLogged'
-import CreditsUnlogged from './components/credits_block/CreditsUnlogged'
-import Bonuses from './components/bonuses_block/Bonuses'
+import Courses from './components/courses_block/Courses'
+import Deadline from './components/deadline_block/Deadline'
+import Header from './components/header/Header.js'
+
+import { initialShop } from './storage/initShops'
+import ProjectRoutes from './routes/ProjectRoutes'
 
 function App() {
-  const location = useLocation();
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+	const location = useLocation()
+	const [isLoggedIn, setIsLoggedIn] = useState(true)
+	const [shops] = useState(initialShop)
 
-  // Для кнопки выход
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
+	// Для кнопки выход
+	const handleLogout = () => {
+		setIsLoggedIn(false)
+	}
 
-  // Для кнопки вход
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
+	// Для кнопки вход
+	const handleLogin = () => {
+		setIsLoggedIn(true)
+	}
 
-  useEffect(() => {
-    // Проверка пути URL и установка значения isLoggedIn
-    if (
-      location.pathname === '/schedule' ||
-      location.pathname === '/menu' ||
-      location.pathname === '/course' ||
-      location.pathname === '/courses' ||
-      location.pathname === '/bonuses' ||
-      location.pathname === '/task' ||
-      location.pathname === '/privacy_logged' ||
-      location.pathname === '/faq_logged' ||
-      location.pathname === '/credits_logged' ||
-      location.pathname === '/loader' ||
-      location.pathname === '/settings'
-    ) {
-      setIsLoggedIn(true);
-    } else {
-      setIsLoggedIn(false);
-    }
-  }, [location.pathname]);
+	useEffect(() => {
+		// Проверка пути URL и установка значения isLoggedIn
+		if (
+			location.pathname === '/' ||
+			location.pathname === '/enter' ||
+			location.pathname === '/privacy' ||
+			location.pathname === '/faq' ||
+			location.pathname === '/credits'
+		) {
+			setIsLoggedIn(false)
+		} else {
+			setIsLoggedIn(true)
+		}
+	}, [location.pathname])
 
+	return (
+		<div className='App'>
+			<ScrollToTop />
 
-  return (
-    <div className="App">
+			<div className='main_container'>
+				<Header isLoggedIn={isLoggedIn} />
 
-      <ScrollToTop />
+				<main className='content_container'>
+					{isLoggedIn && <Courses />}
 
-      {/* <Sky /> */}
+					<ProjectRoutes
+						handleLogin={handleLogin}
+						handleLogout={handleLogout}
+						shops={shops}
+					/>
 
-      <div className="main_container">
-        <Header isLoggedIn={isLoggedIn} />
-
-        <main className="content_container">
-
-          {isLoggedIn && <Courses />}
-
-          <Routes>
-
-            <Route path="/schedule" element={<Schedule />} />
-            <Route path="/menu" element={<Menu handleLogout={handleLogout} />} />
-            <Route path="/course" element={<Course />} />
-            <Route path="/courses" element={<CoursesTablet />} />
-            <Route path="/bonuses" element={<Bonuses />} />
-            <Route path="/task" element={<Task />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/privacy_logged" element={<PrivacyLogged />} />
-            <Route path="/faq_logged" element={<FaqLogged />} />
-            <Route path="/credits_logged" element={<CreditsLogged />} />
-            <Route path="/loader" element={<LoaderBlock />} />
-
-            <Route path="/" element={<Home />} />
-            <Route path="/enter" element={<Enter handleLogin={handleLogin} />} />
-            <Route path="/privacy" element={<PrivacyUnlogged />} />
-            <Route path="/faq" element={<FaqUnlogged />} />
-            <Route path="/credits" element={<CreditsUnlogged />} />
-
-          </Routes>
-
-          {isLoggedIn && <Deadline />}
-
-        </main>
-      </div>
-    </div>
-  );
+					{isLoggedIn && <Deadline />}
+				</main>
+			</div>
+		</div>
+	)
 }
 
-export default App;
+export default App

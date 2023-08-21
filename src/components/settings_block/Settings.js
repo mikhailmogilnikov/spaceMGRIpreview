@@ -1,13 +1,15 @@
 import { PencilSimple, PushPin, PushPinSlash, CaretLeft } from "@phosphor-icons/react";
-import { NavLink } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Settings = () => {
+    const navigate = useNavigate()
+
     return (
         <div className="block settings_block">
-             <NavLink to={'/courses'} className="title_container back_container">
+             <div className="title_container back_container" onClick={() => navigate(-1)}>
                 <CaretLeft weight="bold" className="icon_mid" />
                 <h2>Настройка курсов</h2>
-            </NavLink>
+            </div>
 
             <div className="element_container">
                 <div className="title_container">

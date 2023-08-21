@@ -1,15 +1,17 @@
 import { CaretLeft } from "@phosphor-icons/react";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import FaqContent from "./FaqContent";
 
 const FaqLogged = () => {
+    const navigate = useNavigate()
+
     return ( 
         <div className="block">
 
-            <NavLink to={'/menu'} className="title_container back_container">
+            <div className="title_container back_container" onClick={() => navigate(-1)}>
                 <CaretLeft weight="bold" className="icon_mid" />
                 <h2>Помощь и возможности</h2>
-            </NavLink>
+            </div>
 
             <FaqContent />
 
