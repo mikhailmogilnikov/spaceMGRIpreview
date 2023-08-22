@@ -294,6 +294,7 @@
 		justify-content: center;
 		border-top-left-radius: 23px;
 		border-top-right-radius: 23px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
 		@media (max-width: 500px) {
 			height: 260px;
@@ -342,4 +343,14 @@ pre{
 	white-space: pre-wrap;
   word-wrap: break-word;
 	opacity: 0.7;
+}
+
+.icon-service {
+	flex-shrink: 0;
+	width: 16px;
+	height: 16px;
+}
+
+.service-wrapper {
+	gap: 14px;
 }

@@ -1,5 +1,6 @@
 import { CaretLeft } from '@phosphor-icons/react'
 import { useNavigate } from 'react-router-dom'
+import ShopOption from './ShopOption'
 
 const ShopCard = ({ shop }) => {
 	const navigate = useNavigate()
@@ -9,10 +10,21 @@ const ShopCard = ({ shop }) => {
 				<CaretLeft weight='bold' className='icon_big' />
 				<h4>Назад</h4>
 			</div>
-			<img src={shop.image} alt={shop.name} className='bonus-card-big-img' />
+			<img
+				src={shop.image}
+				alt={shop.name}
+				className='bonus-card-big-img'
+				style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.08)' }}
+			/>
 			<div className='bonus-block bonus-card-wrapper'>
 				<h2>{shop.name}</h2>
 				<pre>{shop.desc}</pre>
+				<div className='element_container'>
+					<div className='title_container'>
+						<h3>Услуги</h3>
+					</div>
+					<ShopOption services={shop.services} />
+				</div>
 			</div>
 		</div>
 	)
