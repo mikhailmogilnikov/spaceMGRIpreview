@@ -35,22 +35,22 @@ const Bonuses = () => {
 				</div>
 
 				<div className='element_container' style={{ gap: '20px' }}>
-					<div className='content_cover large-rounded'>
-						<NavLink to={'./faq'} className='content_elem_row select'>
+					<div className='content_cover large-rounded select-zoom'>
+						<NavLink to={'./faq'} className='content_elem_row'>
 							<Question weight='bold' className='icon_mid' />
 							<p>Как получить</p>
 							<CaretRight weight='bold' className='icon_mid' />
 						</NavLink>
 					</div>
 					<div className='bonus-flex-wrapper'>
-						<NavLink to={'./history'} className='bonus-flex-item'>
+						<NavLink to={'./history'} className='bonus-flex-item select-zoom'>
 							<h4>
 								История
 								<br /> операций
 							</h4>
 							<Receipt weight='fill' className='bonus-icon' />
 						</NavLink>
-						<NavLink to={'./leaderboard'} className='bonus-flex-item'>
+						<NavLink to={'./leaderboard'} className='bonus-flex-item select-zoom'>
 							<h4>
 								Таблицы
 								<br /> лидеров
@@ -68,8 +68,8 @@ const Bonuses = () => {
 						<CaretRight weight='bold' className='icon_mid' />
 					</NavLink>
 					<div className='bonus-preview-wrapper'>
-						{shops.slice(0, 4).map(shop => (
-							<ShopPreview key={shop.id} shop={shop} />
+						{shops.slice(0, 4).map((shop, index) => (
+							<ShopPreview key={index} shop={shop} shopIndex={index} />
 						))}
 					</div>
 				</div>
@@ -82,7 +82,7 @@ const Bonuses = () => {
 					</NavLink>
 					<div className='bonus-preview-wrapper'>
 						{events.slice(0, 4).map(event => (
-							<EventPreview key={event.name}  event={event} />
+							<EventPreview key={event.name} event={event} />
 						))}
 					</div>
 				</div>

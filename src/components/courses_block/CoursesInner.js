@@ -12,12 +12,12 @@ const CoursesInner = () => {
 				</NavLink>
 			</div>
 			<div className='course_list_container'>
-				<NavLink to='/course' className='course_list_item select'>
+				<NavLink to='/course' className='course_list_item select-zoom'>
 					<h3>Сейсморазведка</h3>
 					<CaretRight weight='bold' className='icon_min' />
 				</NavLink>
 
-				<div className='course_list_item select'>
+				<div className='course_list_item select-zoom'>
 					<h3>Магниторазведка</h3>
 					<CaretRight weight='bold' className='icon_min' />
 				</div>

@@ -103,8 +103,8 @@ const Menu = ({ handleLogout }) => {
 					</div>
 				</div>
 
-				<div className='content_cover'>
-					<NavLink to='/settings' className='content_elem_row select'>
+				<div className='content_cover select-zoom'>
+					<NavLink to='/settings' className='content_elem_row'>
 						<GearFine weight='bold' className='icon_mid' />
 						<p>Настроить курсы</p>
 						<CaretRight weight='bold' className='icon_mid' />

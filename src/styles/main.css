@@ -47,23 +47,6 @@
 	}
 }
 
-/*@media (prefers-color-scheme: dark) {*/
-/*:root {*/
-/*    --var-bg: #000000;*/
-/*    --var-block: #121212;*/
-/*    --var-text-and-icons: #FFFFFF;*/
-/*    --var-elements: #1d1d1d;*/
-/*    --var-deadline-button: #383838;*/
-/*    --var-mobile-nav-bar: #000000b3;*/
-/*    --var-active-element: #2B2B2B;*/
-/*    --var-switcher-bg: #3D3D3D;*/
-/*    --var-red: #E34A4A;*/
-/*    --var-hover: #242424;*/
-/*    --var-push: #2a2a2a;*/
-/*    --var-modal-bg: #121212;*/
-/*}*/
-/*}*/
-
 * {
 	font-family: 'Inter', Arial, Helvetica, sans-serif;
 	letter-spacing: 0em;
@@ -83,7 +66,7 @@
 
 *::-webkit-scrollbar-track {
 	overflow: overlay;
-	background: var(--var-bg);
+	background-color: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -438,7 +421,7 @@ a {
 	border-radius: 23px;
 	overflow: hidden;
 
-	animation: enterBlock 2s cubic-bezier(0, 1, 0, 1), enterOpacity 0.2s linear;
+	animation: enterBlock 1.2s cubic-bezier(0, 1, 0, 1), enterOpacity 0.2s linear;
 }
 
 .edge_block {
@@ -497,7 +480,7 @@ a {
 	box-shadow: 0px 5px 10px 0px var(--var-shadow);
 	background: var(--var-text-and-icons);
 
-	transition: all 0.08s ease-in-out;
+	transition: opacity 0.08s, transform 0.15s linear;
 }
 
 @media (pointer: fine) {
@@ -507,7 +490,7 @@ a {
 }
 
 .button_main:active {
-	opacity: 0.8;
+	transform: scale(0.95);
 }
 
 .text_button_main {
@@ -578,7 +561,7 @@ a {
 	align-content: center;
 	flex-wrap: nowrap;
 	gap: 15px;
-	border-radius: 14px;
+	border-radius: 16px;
 }
 
 .element_container {
@@ -824,7 +807,7 @@ a {
 
 .select {
 	cursor: pointer;
-	transition: 0.08s ease-in-out;
+	transition: background-color 0.08s ease-in-out;
 	user-select: none;
 }
 
@@ -832,10 +815,24 @@ a {
 	.select:hover {
 		background-color: var(--var-hover);
 	}
+
+	.select-zoom:hover {
+		background-color: var(--var-hover);
+	}
 }
 
 .select:active {
 	background-color: var(--var-push);
+}
+
+.select-zoom{
+	cursor: pointer;
+	transition: background-color 0.08s, transform 0.15s linear;
+	user-select: none;
+}
+
+.select-zoom:active {
+	transform: scale(0.95);
 }
 
 .active {

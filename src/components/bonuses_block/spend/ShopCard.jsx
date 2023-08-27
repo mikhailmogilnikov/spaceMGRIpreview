@@ -18,7 +18,19 @@ const ShopCard = ({ shop }) => {
 			/>
 			<div className='bonus-block bonus-card-wrapper'>
 				<h2>{shop.name}</h2>
-				<pre>{shop.desc}</pre>
+				{shop.desc && <pre>{shop.desc}</pre>}
+				{shop.location && (
+					<div className='element_container'>
+						<div className='title_container'>
+							<h3>Получение</h3>
+						</div>
+						<div className='content_cover'>
+							<div className='content_elem_row'>
+								<pre>{shop.location}</pre>
+							</div>
+						</div>
+					</div>
+				)}
 				<div className='element_container'>
 					<div className='title_container'>
 						<h3>Услуги</h3>

@@ -52,11 +52,11 @@ const ProjectRoutes = ({ handleLogin, handleLogout, shops }) => {
 			<Route path='/bonuses/spend' element={<BonusSpend />} />
 			<Route path='/bonuses/events' element={<BonusEvents />} />
 			
-			{shops.map(shop => (
+			{shops.map((shop, index) => (
 				<Route
-					path={`/bonuses/spend/${shop.id}`}
+					path={`/bonuses/spend/${index}`}
 					key={shop.id}
-					element={<ShopCard key={shop.id} shop={shop} />}
+					element={<ShopCard key={index} shop={shop} />}
 				/>
 			))}
 		</Routes>

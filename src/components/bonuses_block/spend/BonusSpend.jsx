@@ -19,8 +19,8 @@ const BonusSpend = () => {
 			</div>
 
 			<div className='element_container grid-two'>
-				{shop.map(shop => (
-					<ShopFullPreview key={shop.id} shop={shop} />
+				{shop.map((shop, index) => (
+					<ShopFullPreview key={index} shop={shop} shopIndex={index} />
 				))}
 			</div>
 		</div>

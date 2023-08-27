@@ -6,7 +6,7 @@ const DeadlineInner = () => {
         <>
             <div className="deadline_row_container">
                 
-                <NavLink to={'/task'} className="content_cover select">
+                <NavLink to={'/task'} className="content_cover select-zoom">
                     <div className="content_elem_row">
                         <div className="content_inner_column">
                             <h3>Сейсморазведка</h3>
@@ -20,7 +20,7 @@ const DeadlineInner = () => {
                     </div>
                 </NavLink>
 
-                <div className="content_cover select">
+                <div className="content_cover select-zoom">
                     <div className="content_elem_row">
                         <div className="content_inner_column">
                             <h3>Магниторазведка</h3>

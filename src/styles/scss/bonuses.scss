@@ -67,7 +67,6 @@
 		height: 100%;
 		display: flex;
 		border-radius: 24px;
-		transition: all 0.08s;
 		cursor: pointer;
 		user-select: none;
 		overflow: hidden;
@@ -77,9 +76,6 @@
 			&:hover {
 				background-color: var(--var-hover);
 			}
-		}
-		&:active {
-			background-color: var(--var-push);
 		}
 
 		> h4 {
@@ -232,17 +228,8 @@
 	border-radius: 24px;
 	overflow: hidden;
 	border: 1px solid rgba(0, 0, 0, 0.08);
-	transition: background-color 0.08s ease-in-out;
 	cursor: pointer;
 
-	@media (pointer: fine) {
-		&:hover {
-			background-color: var(--var-hover);
-		}
-	}
-	&:active {
-		background-color: var(--var-push);
-	}
 
 	.bonus-preview-img {
 		width: 100%;
@@ -330,7 +317,8 @@
 	padding: 6px 5px 6px 9px;
 }
 
-pre{
+pre {
+	box-sizing: border-box;
 	font-family: 'Inter', Arial, Helvetica, sans-serif;
 	font-weight: 500;
 	color: var(--var-text-and-icons);
@@ -341,7 +329,7 @@ pre{
 	height: auto;
 	position: relative;
 	white-space: pre-wrap;
-  word-wrap: break-word;
+	word-wrap: break-word;
 	opacity: 0.7;
 }
 
@@ -353,4 +341,37 @@ pre{
 
 .service-wrapper {
 	gap: 14px;
+}
+
+.bonus-modal {
+	height: min-content;
+	max-height: 80vh;
+}
+
+.bonus-modal-content {
+	position: relative;
+	box-sizing: border-box;
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 100%;
+	max-height: calc(80vh - 330px);
+}
+
+.fader-top{
+	position: fixed;
+	margin-top: -1px;
+	left: 0;
+	right: 0;
+	height: 20px;
+	background: linear-gradient(var(--var-block), hsla(264, 0%, 100%, 0));
+	z-index: 2;
+}
+
+.fader-bottom {
+	position: sticky;
+	bottom: 0;
+	width: calc(100% - 20px);
+	height: 20px;
+	background: linear-gradient(hsla(264, 0%, 100%, 0), var(--var-block));
+	z-index: 1;
 }
