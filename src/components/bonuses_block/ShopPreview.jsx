@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom'
 
-const ShopPreview = ({ shop, shopIndex }) => {
+const ShopPreview = ({ shop }) => {
 	return (
-		<NavLink to={`./spend/${shopIndex}`} className='bonus-preview-item'>
+		<NavLink to={`./spend/${shop.id}`} className='bonus-preview-item'>
 			<img src={shop.image} alt={shop.name} className='bonus-preview-img' />
 			<div className='info-wrapper'>
 				<h4>{shop.name}</h4>

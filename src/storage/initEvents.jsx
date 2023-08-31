@@ -5,23 +5,28 @@ import event4 from '../resouces/pictures/events/vmhg3ys66q6d0zt56qtmwxtbqjkfteww
 
 export const initialEvents = [
   {
+    id: 1,
     name: "Международное сотрудничество",
-		time: "Завтра",
+		date: "24.09.2023",
     image: event1,
+    location: "Главный холл МГРИ"
   },
 	{
+    id: 2,
     name: "Объединенный совет",
-		time: "25.09.2023",
+		date: "25.09.2023",
     image: event2,
   },
 	{
+    id: 3,
     name: "Выступление ректора для студентов",
-		time: "29.09.2023",
+		date: "29.09.2023",
     image: event3,
   },
 	{
+    id: 4,
     name: "Олимпиада для студентов",
-		time: "05.10.2023",
+		date: "05.10.2023",
     image: event4,
   },
 ]

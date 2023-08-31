@@ -24,7 +24,6 @@
 	background-color: var(--var-text-and-icons);
 
 	transform: translateY(-100px);
-	opacity: 0;
 	transition: transform 0.3s ease, opacity 0.3s ease;
 
 	.header-button-text {
@@ -45,30 +44,44 @@
 	align-items: center;
 	flex-direction: column;
 	gap: 10px;
-	padding-top: 7vh;
+	padding-top: 6vh;
 
 	overflow: hidden;
 }
 
 .big-letters {
 	text-align: center;
-	font-size: 90px;
+	font-size: 86px;
 	font-weight: 800;
 	background-clip: text;
 	color: var(--var-text-and-icons);
-
-	animation: changeColor 10s ease infinite;
-	animation-delay: 1s;
 	letter-spacing: -1px;
+	width: 90%;
+
+	@media (max-width: 1340px) {
+		font-size: 6vw;
+	}
+
+	@media (max-width: 600px) {
+		font-size: 6vh;
+		width: 100%;
+	}
 }
 
-.big-letters:first-child {
+.big-letters-first {
 	background-image: linear-gradient(195deg, #ff4100, #ff9900);
+	width: min-content;
+	animation: changeColor 6s ease infinite;
+	animation-delay: 1s;
+	display: inline;
 }
 
-.big-letters:last-child {
+.big-letters-second {
 	background-image: linear-gradient(143deg, #ff00ab, #9000ff);
-	animation-delay: 5s;
+	width: min-content;
+	animation: changeColor 6s ease infinite;
+	display: inline;
+	animation-delay: 3.5s;
 }
 
 .small-letters-wrapper {
@@ -119,7 +132,7 @@
 	border-radius: 100px;
 	padding: 1px 4px 0px 6px;
 	// margin-right: 5px;
-	
+
 	.geolabs-icon {
 		height: 93%;
 		width: auto;
@@ -148,7 +161,7 @@
 	padding: 1px 0px 0px 6px;
 	margin-right: 8px;
 	box-shadow: 0px 2.5px 10px 0px #ff66006d;
-	
+
 	.geolabs-icon {
 		height: 93%;
 		width: auto;
@@ -206,7 +219,6 @@
 .under-title {
 	margin-top: 40px;
 	align-items: start;
-
 }
 
 .right-pos {
@@ -237,7 +249,11 @@
 	height: 150px;
 	position: absolute;
 	bottom: 0;
-	background: linear-gradient(to top, var(--var-bg), hsla(264, 63.18%, 45.88%, 0));
+	background: linear-gradient(
+		to top,
+		var(--var-bg),
+		hsla(264, 63.18%, 45.88%, 0)
+	);
 	z-index: 5;
 }
 
@@ -248,17 +264,13 @@
 	letter-spacing: -1px;
 }
 
-
 @media (max-width: 1360px) {
 	.header-button {
 		right: 20px;
 	}
 }
 
-
 @media (max-width: 1220px) {
-
-
 	.content-element {
 		flex-direction: column;
 		padding-top: 0px;
@@ -288,18 +300,6 @@
 		padding-top: 0px;
 	}
 
-	.big-letters {
-		width: 100%;
-		text-align: center;
-		font-size: 52px;
-		font-weight: 800;
-		background-clip: text;
-		color: var(--var-text-and-icons);
-
-		animation: changeColor 10s ease infinite;
-		animation-delay: 1s;
-	}
-
 	.small-letters-wrapper {
 		padding-top: 50px;
 	}
@@ -319,7 +319,7 @@
 		font-weight: 700;
 		text-align: center;
 	}
-	
+
 	.under-title {
 		margin-top: 0px;
 	}

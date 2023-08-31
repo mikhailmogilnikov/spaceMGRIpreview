@@ -12,11 +12,13 @@ import Header from './components/header/Header.js'
 
 import { initialShop } from './storage/initShops'
 import ProjectRoutes from './routes/ProjectRoutes'
+import { initialEvents } from './storage/initEvents'
 
 function App() {
 	const location = useLocation()
 	const [isLoggedIn, setIsLoggedIn] = useState(true)
 	const [shops] = useState(initialShop)
+	const [events] = useState(initialEvents)
 
 	// Для кнопки выход
 	const handleLogout = () => {
@@ -57,6 +59,7 @@ function App() {
 						handleLogin={handleLogin}
 						handleLogout={handleLogout}
 						shops={shops}
+						events={events}
 					/>
 
 					{isLoggedIn && <Deadline />}

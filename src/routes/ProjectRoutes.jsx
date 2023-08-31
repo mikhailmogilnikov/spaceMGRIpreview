@@ -22,8 +22,9 @@ import BonusLeaderboard from '../components/bonuses_block/leaderboard/BonusLeade
 import BonusSpend from '../components/bonuses_block/spend/BonusSpend'
 import BonusEvents from '../components/bonuses_block/events/BonusEvents'
 import ShopCard from '../components/bonuses_block/spend/ShopCard'
+import EventsCard from '../components/bonuses_block/events/EventsCard'
 
-const ProjectRoutes = ({ handleLogin, handleLogout, shops }) => {
+const ProjectRoutes = ({ handleLogin, handleLogout, shops, events }) => {
 	return (
 		<Routes>
 			{/* Неавторизованные пути */}
@@ -51,12 +52,20 @@ const ProjectRoutes = ({ handleLogin, handleLogout, shops }) => {
 			<Route path='/bonuses/leaderboard' element={<BonusLeaderboard />} />
 			<Route path='/bonuses/spend' element={<BonusSpend />} />
 			<Route path='/bonuses/events' element={<BonusEvents />} />
-			
-			{shops.map((shop, index) => (
+
+			{shops.map(shop => (
 				<Route
-					path={`/bonuses/spend/${index}`}
+					path={`/bonuses/spend/${shop.id}`}
 					key={shop.id}
-					element={<ShopCard key={index} shop={shop} />}
+					element={<ShopCard key={shop.id} shop={shop} />}
+				/>
+			))}
+
+			{events.map(event => (
+				<Route
+					path={`/bonuses/events/${event.id}`}
+					key={event.name}
+					element={<EventsCard key={event.name} event={event} />}
 				/>
 			))}
 		</Routes>

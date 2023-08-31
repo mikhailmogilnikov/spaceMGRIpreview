@@ -68,8 +68,8 @@ const Bonuses = () => {
 						<CaretRight weight='bold' className='icon_mid' />
 					</NavLink>
 					<div className='bonus-preview-wrapper'>
-						{shops.slice(0, 4).map((shop, index) => (
-							<ShopPreview key={index} shop={shop} shopIndex={index} />
+						{shops.slice(0, 4).map(shop => (
+							<ShopPreview key={shop.id} shop={shop} />
 						))}
 					</div>
 				</div>

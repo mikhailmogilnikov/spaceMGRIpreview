@@ -10,6 +10,7 @@ const ShopModal = ({
 	setIsOpenAllowed,
 }) => {
 	const [service, setService] = useState(services[serviceIndex])
+	const [isAnimating, setIsAnimating] = useState(false)
 
 	useEffect(() => {
 		changeService()
@@ -22,10 +23,9 @@ const ShopModal = ({
 	}
 
 	const closeModal = () => {
-		setTimeout(() => {
-			setActiveModal(null)
-			setService(services[serviceIndex])
-		})
+		if (isAnimating) return
+		setActiveModal(null)
+		setService(services[serviceIndex])
 	}
 
 	const isModal = serviceIndex !== null
@@ -52,6 +52,8 @@ const ShopModal = ({
 				classNames={'modal_bg_anim'}
 				timeout={200}
 				unmountOnExit
+				onEnter={() => setIsAnimating(false)}
+				onExit={() => setIsAnimating(true)}
 			>
 				<div onClick={closeModal} className='modal_bg'></div>
 			</CSSTransition>
@@ -61,6 +63,8 @@ const ShopModal = ({
 				timeout={1000}
 				classNames={'modal_anim'}
 				unmountOnExit
+				onEnter={() => setIsAnimating(false)}
+				onExit={() => setIsAnimating(true)}
 			>
 				<div className='modal bonus-modal'>
 					<div className='title_container'>

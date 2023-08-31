@@ -210,6 +210,6 @@
 
 	.modal-accept-wrapper {
 		height: min-content;
-		width: 92vw;
+        width: calc(100vw - 40px);
 	}
 }

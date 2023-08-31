@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom'
 
-const ShopFullPreview = ({ shop, shopIndex }) => {
+const ShopFullPreview = ({ shop }) => {
 	
 	return (
-		<NavLink to={`./${shopIndex}`} key={shopIndex} className='big-item-wrapper select-zoom'>
+		<NavLink to={`./${shop.id}`} key={shop.id} className='big-item-wrapper select-zoom'>
 			<img id="shopImg" src={shop.image} alt={shop.name} className='bonus-preview-img' />
 			<div className='info-wrapper'>
 				<h4>{shop.name}</h4>

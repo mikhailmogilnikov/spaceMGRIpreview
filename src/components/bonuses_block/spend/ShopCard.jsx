@@ -6,7 +6,7 @@ const ShopCard = ({ shop }) => {
 	const navigate = useNavigate()
 	return (
 		<div className='block bonus-block-card'>
-			<div className='bonus-back-button' onClick={() => navigate(-1)}>
+			<div className='bonus-back-button select-zoom' onClick={() => navigate(-1)}>
 				<CaretLeft weight='bold' className='icon_big' />
 				<h4>Назад</h4>
 			</div>

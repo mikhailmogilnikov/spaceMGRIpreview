@@ -44,14 +44,16 @@ const Home = () => {
 				<h4 className='header-button-text'>Войти</h4>
 			</NavLink>
 			<div className='big-letters-wrapper'>
-				<h2 className='big-letters'>Достигать целей.</h2>
-				<h2 className='big-letters'>По-новому.</h2>
+				<h2 className='big-letters'>
+					Помогает студентам решать частые задачи
+					<span className='big-letters big-letters-first'> быстрее</span> и
+					<span className='big-letters big-letters-second'> удобнее.</span>
+				</h2>
 			</div>
 
 			<div className='small-letters-wrapper'>
 				<h3 className='small-letters low_opacity'>
-					Глобальное дополнение к электронно-образовательной платформе МГРИ,
-					помогающее студентам решать частые задачи быстрее и удобнее.
+					Глобальное дополнение к электронно-образовательной платформе МГРИ.
 				</h3>
 			</div>
 
@@ -136,7 +138,7 @@ const Home = () => {
 					</div>
 					<div
 						className='content-part schedule-break left-pos course-break'
-						style={{ 'justify-content': 'start' }}
+						style={{ 'justifyContent': 'start' }}
 					>
 						<div className='fader'></div>
 						<CoursePreview />
@@ -208,10 +210,9 @@ const Home = () => {
 				</div>
 			</div>
 
-
-			<div className='small-letters-wrapper' style={{gap: '10px'}}>
-				<h4 style={{marginBottom: '10px'}}>Разработано в студии</h4>
-				<GeoLabs 	/>
+			<div className='small-letters-wrapper' style={{ gap: '10px' }}>
+				<h4 style={{ marginBottom: '10px' }}>Разработано в студии</h4>
+				<GeoLabs />
 			</div>
 		</div>
 	)

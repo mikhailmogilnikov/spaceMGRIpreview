@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import Lottie from 'react-lottie';
 import animationData from '../../../../resouces/lottie/animation_llqlhh8z.json';
 
-function LottieAnimation() {
+function AcceptAnimation() {
   const options = {
     animationData,
   };
@@ -40,4 +40,4 @@ function LottieAnimation() {
   );
 }
 
-export default LottieAnimation;
+export default AcceptAnimation;
