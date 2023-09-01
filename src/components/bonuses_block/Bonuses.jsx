@@ -5,7 +5,6 @@ import {
 	Receipt,
 	Trophy,
 } from '@phosphor-icons/react'
-
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { initialEvents } from '../../storage/initEvents'
@@ -13,6 +12,8 @@ import { initialShop } from '../../storage/initShops'
 import '../../styles/scss/bonuses.scss'
 import EventPreview from './EventsPreview'
 import ShopPreview from './ShopPreview'
+
+export const currentDate = '01.09.2023'
 
 const Bonuses = () => {
 	const [shops] = useState(initialShop)
@@ -76,7 +77,7 @@ const Bonuses = () => {
 
 				<div className='element_container'>
 					<NavLink to={'./events'} className='title_container bonus-title'>
-						<h3>События</h3>
+						<h3>Мероприятия</h3>
 						<div className='bubble-text'>{events.length}</div>
 						<CaretRight weight='bold' className='icon_mid' />
 					</NavLink>

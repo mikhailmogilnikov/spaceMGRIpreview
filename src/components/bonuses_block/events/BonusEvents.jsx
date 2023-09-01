@@ -15,7 +15,7 @@ const BonusEvents = () => {
 				onClick={() => navigate(-1)}
 			>
 				<CaretLeft weight='bold' className='icon_mid' />
-				<h2>События</h2>
+				<h2>Мероприятия</h2>
 			</div>
 
 			<div className='element_container grid-two'>

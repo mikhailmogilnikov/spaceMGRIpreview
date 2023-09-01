@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { currentDate } from '../Bonuses'
 
 const EventsFullPreview = ({ event }) => {
 	return (
@@ -15,7 +16,7 @@ const EventsFullPreview = ({ event }) => {
 			/>
 			<div className='info-wrapper'>
 				<h4>{event.name}</h4>
-				<p>{event.date === '24.09.2023' ? 'Сегодня' : event.date}</p>
+				<p>{event.date === currentDate ? 'Сегодня' : event.date}</p>
 			</div>
 		</NavLink>
 	)
